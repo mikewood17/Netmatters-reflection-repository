@@ -37,7 +37,6 @@ ul {
 
 p {
   font-size: 1em;
-  color: red;
 }
 
 h2,
@@ -1669,29 +1668,36 @@ a {
 }
 
 .banner-img-1 {
-  background-image: url("../img/banner/lead-banner.webp");
+  background: url("../img/banner/lead-banner.webp") no-repeat;
+  background-size: cover;
 }
 
 .banner-img-2 {
-  background-image: url("../img/banner/bespoke-sfotware-banner.png");
+  background: url("../img/banner/bespoke-software-banner.webp") no-repeat;
+  background-size: cover;
 }
 
 .banner-img-3 {
-  background-image: url("../img/banner/it-support-banner.webp");
+  background: url("../img/banner/it-support-banner.webp") no-repeat;
+  background-size: cover;
 }
 
 .banner-img-4 {
-  background-image: url("../img/banner/digital-marketing-banner.webp");
+  background: url("../img/banner/digital-marketing-banner.webp") no-repeat;
+  background-size: cover;
 }
 
 .banner-img-5 {
-  background-image: url("../img/banner/telemarketing-banner.webp");
+  background: url("../img/banner/telemarketing-banner.webp") no-repeat;
+  background-size: cover;
 }
 
 .banner-img-6 {
-  background-image: url("../img/banner/web-design.webp");
+  background: url("../img/banner/web-design.webp") no-repeat;
+  background-size: cover;
 }
 
 .banner-img-7 {
-  background-image: url("../img/banner/cyber-security-banner.webp");
+  background: url("../img/banner/cyber-security-banner.webp") no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=application.css.map */

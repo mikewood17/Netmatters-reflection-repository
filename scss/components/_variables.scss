@@ -115,6 +115,7 @@
     $i: index($banner-imgs, $name $src);
 
     .banner-img-#{$i} {
-        background-image: url('#{$src}');
+        background: url('#{$src}')  no-repeat;
+        background-size: cover;
     }
 }
