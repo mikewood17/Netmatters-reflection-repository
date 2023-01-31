@@ -119,3 +119,16 @@
         background-size: cover;
     }
 }
+
+
+@each $name, $color in $news-color {
+    $i: index($news-color, $name $color);
+
+    .news-title-#{$i} a {
+        color: $color;
+    }
+
+    .news-btn-#{$i} {
+        background-color: $color;
+    }
+}

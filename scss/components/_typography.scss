@@ -47,18 +47,27 @@
     font-size: 2.5em;
 }
 .article-content{
-    font-size: 1.5em;
-    p {
-        margin: 0 1.5em 1em 1.5em;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.875rem;
+    strong{
+        font-weight: 600;
     }
 }
 .client-quote{
-    font-size: 1.8em;
+    font-size: 1.3em;
     font-style: italic;
 }
 .quote-author{
-    font-size: 1.5em;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #a3a8ac;
+    a{
+        color: #fff;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
 
 // Latest news area
@@ -91,8 +100,9 @@
 }
 .privacy-policy{
     color:#333645;
-    font-size: 1.2em;
+    font-size: 1rem;
     font-weight: 600;
+    line-height: 32px;
 }
 
 .privacy-policy a {
