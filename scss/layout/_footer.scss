@@ -1,0 +1,59 @@
+
+.main-footer {
+    text-align: center;
+    background-color: #333645;
+    color: #fff;
+    padding: 47px 0 43px;
+    a {
+        color: #fff;
+    }
+}
+
+.service,
+.office {
+    padding: 15px;
+    justify-content: space-evenly;
+}
+.services, 
+.offices h4 {
+    left: 0;
+}
+.services{
+    display: flex;
+
+    align-items: flex-start;
+}
+.service ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service, .office li {
+    line-height: 1.7rem;
+    font-size: 1rem;;
+}
+.service label {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 26px;
+    font-weight: 500;
+}
+.office label {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 26px;
+    font-weight: 500;
+}
+
+.offices ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.office {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}

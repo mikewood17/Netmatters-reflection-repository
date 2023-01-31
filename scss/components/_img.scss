@@ -1,0 +1,30 @@
+.news-img{
+    max-width: 100%;
+}
+
+.top-logo{
+    max-width: 100%;
+    display: block;
+}
+
+.carousel-item, .client-item {
+    margin: 30px;
+    filter: grayscale(100%);
+    &:hover{
+        filter: grayscale(0);
+    }
+}
+
+.client-img, .carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item img {
+    margin-right: 20px;
+}
+
+.banner-img{
+    width: 100%;
+    height: 100%;
+}
