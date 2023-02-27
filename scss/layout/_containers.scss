@@ -20,12 +20,12 @@
     margin-left: 50px;
     margin-right: 50px;
 }
+
 .search {
     display: flex;
 }
 
 .search-form{
-    margin-top: 11px;
     position: relative;
 }
 .secondary-nav{
@@ -57,7 +57,7 @@
 }
 
 .top-nav{
-    width: 200px;
+    width: 134px;
     font-size: 1.125rem;
 }
 .top-nav small {
@@ -73,7 +73,7 @@
     background-color: #333645;
     position: absolute;
     // transform: translate(0, 15px);
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 50px;
 
     visibility: hidden;
@@ -86,10 +86,57 @@
     .triangle {
         visibility: visible;
 
-        width: 200px;
+        width: 134px;
         height: 35px;
         transform: translate(-14px, 0px);
         clip-path: polygon(0 0,50% 100%,100% 0%);
+    }
+}
+
+.sub-title{
+    font-size: 2rem !important;
+    width: 100% !important;
+    color: #fff!important;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.sub-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -15px;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+.sub-content li {
+    display: flex;
+    align-items: center;
+    width: 33%;
+    font-weight: 300;
+}
+.sub-content i {
+    margin-right: 10px;
+}
+
+.sub-content a {
+    font-size: 1.2rem !important;
+    padding: 0.625rem 0.938rem 0.625rem 0 !important;
+    text-align: left !important;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+@media (min-width: 1260px){
+    .top-nav{
+        width: 167px;
+    }
+    .triangle{
+        width: 167px !important;
     }
 }
 
@@ -117,14 +164,14 @@
     z-index: 2;
 }
 .banner-item {
-    height: 700px;
+    height: 550px;
     position: relative;
     width: 100%;
 }
 
 .banner-carousel {
     color: #fff;
-    min-height: 740px !important;
+    min-height: 550px !important;
     min-width: 100vw !important;
     // margin-top: 220px;
     position: relative;
@@ -136,13 +183,14 @@
 .banner-content{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
-    margin-left: 50px;
     position: absolute;
     color: #fff;
-    top: 175px;
+    top: 20%;
     z-index: 4;
+    text-align: center;
+    width: 100%;
 }
 
 .banner-content h1{
@@ -163,14 +211,13 @@
 .banner-content a{
     padding: 5px 20px;
     font-size: 1.25rem;
-    font-size: 1.625rem;
     line-height: 2.5rem;
     margin-top: 1.938rem;
     margin-bottom: 1.125rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: auto;
 }
 
 .banner-content i {
@@ -185,9 +232,6 @@
 }
 
 @media (min-width: 992px) {
-    .banner-content{
-        margin-left: 150px;
-    }
     .banner-content h1 {
         font-size: 4rem;
         line-height: 5rem;
@@ -207,6 +251,12 @@
 
 .row {
     margin-bottom: 50px;
+}
+
+.view-services{
+    font-size: 25px;
+    text-align: center;
+    margin: 15px 0 15px 0;
 }
 
 // Carousel images
@@ -528,7 +578,7 @@
     width: auto;
     position: relative;
     transform: transalte(-50%,-50%);
-    top: 30%;
+    top: 10%;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
     background-clip: padding-box;
@@ -583,10 +633,15 @@
 
 .cookie-buttons{
     text-decoration: none;
-    display: block;
     position: relative;
     margin: auto;
     text-align: center;
+    width: 250px;
+    height: 50px;
+    font-size: 1.063em !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 }
 .cookie-button{
     background-color: #926fb1;

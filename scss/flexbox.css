@@ -2,6 +2,14 @@
 /* ================================= 
   Media Queries
 ==================================== */
+
+
+@media(max-width: 375px){
+    .review-btn-container a {
+        font-size: 1rem;
+    }
+}
+
 @media (min-width:0px) and (max-width: 768px) {
     .secondary-nav {
         display: none;
@@ -17,6 +25,11 @@
     .view-all {
         display: none;
     }
+
+    .view-services{
+        display: block;
+    }
+
     .search {
         display: none;
     }
@@ -56,6 +69,10 @@
 	}
     .container {
         max-width: 740px;
+    }
+
+    .view-services{
+        display: none;
     }
 
     .banner{
@@ -105,9 +122,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
     }
-    .view-all {
-        display: none;
-    }
+
     .hidden-sm{
         display: none;
     }
@@ -120,8 +135,7 @@
 }
 
 @media (min-width: 959px) {
-    .secondary-nav,
-    .view-all {
+    .secondary-nav {
         display: none;
     }
     .row, 
@@ -130,7 +144,14 @@
     }
 }
 
-@media (min-width: 960px) and (max-width: 1249px) {
+@media (min-width: 768px) and (max-width: 991px){
+    .container_button{
+        display: none;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1259px) {
     .row{
         flex-wrap: wrap;
     }
@@ -139,7 +160,7 @@
     }
 
     .container_button {
-        display: none;
+        display: flex;
     }
     .imporant-nav {
         display: flex;
@@ -154,13 +175,33 @@
         display: none;
     }
 
+    .search-btn{
+        border-radius: 3px !important;
+    }
+
     /* .item-3 {
         flex: 1 250px;
     } */
 }
 
+@media (min-width: 992px) {
 
-@media (min-width: 1250px) {
+    .container{
+        max-width: 970px;
+    }
+
+    .banner-content{
+        align-items: flex-start;
+        text-align: left;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 40px;
+        padding-right: 15px;
+    }
+
+}
+
+@media (min-width: 1260px) {
 
     .secondary-nav,
     .container_button,
@@ -177,6 +218,7 @@
 	    }
     .search-bar{
         display: inline-flex;
+        width: 240px !important;
     }
     .headline{
         font-size: 3rem;

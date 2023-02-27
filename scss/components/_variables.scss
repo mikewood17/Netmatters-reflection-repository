@@ -117,6 +117,7 @@
     .banner-img-#{$i} {
         background: url('#{$src}')  no-repeat;
         background-size: cover;
+        background-position: right center;
     }
 }
 

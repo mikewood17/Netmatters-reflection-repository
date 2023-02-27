@@ -20,17 +20,17 @@ function openMenu() {
     mainHeader.style.marginRight = "300px";
     backgroundFade.style.display = 'block';
     main.classList.toggle('menu-open');
-    // body[0].style.overflow = 'hidden';
+    body.classList.add('no-scroll');
 }
 
 function closeMenu() {
     slide_menu.classList.remove('side-menu_open');
     main.style.marginRight = "0px";
-    mainHeader.style.position = "fixed";
-    mainHeader.style.marginRight = "0px";
+    // mainHeader.style.position = "fixed";
+    // mainHeader.style.marginRight = "0px";
     backgroundFade.style.display = 'none';
     main.classList.toggle('menu-open');
-    // body[0].style.overflow = 'scroll';
+    body.classList.remove('no-scroll');
 }
 
 menu_btn.addEventListener('click', function() {

@@ -17,6 +17,12 @@ body {
   overflow-x: hidden;
 }
 
+.no-scroll {
+  position: fixed;
+  inline-size: 100%;
+  overflow-y: scroll;
+}
+
 .main {
   margin-right: 0;
   transition: all 0.5s;
@@ -209,7 +215,6 @@ a {
 }
 
 .search-form {
-  margin-top: 11px;
   position: relative;
 }
 
@@ -241,7 +246,7 @@ a {
 }
 
 .top-nav {
-  width: 200px;
+  width: 134px;
   font-size: 1.125rem;
 }
 
@@ -257,7 +262,7 @@ a {
   z-index: 99;
   background-color: #333645;
   position: absolute;
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 50px;
   visibility: hidden;
 }
@@ -267,13 +272,60 @@ a {
 }
 .top-nav:hover .triangle {
   visibility: visible;
-  width: 200px;
+  width: 134px;
   height: 35px;
   transform: translate(-14px, 0px);
   -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0%);
           clip-path: polygon(0 0, 50% 100%, 100% 0%);
 }
 
+.sub-title {
+  font-size: 2rem !important;
+  width: 100% !important;
+  color: #fff !important;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.sub-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: -15px;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.sub-content li {
+  display: flex;
+  align-items: center;
+  width: 33%;
+  font-weight: 300;
+}
+
+.sub-content i {
+  margin-right: 10px;
+}
+
+.sub-content a {
+  font-size: 1.2rem !important;
+  padding: 0.625rem 0.938rem 0.625rem 0 !important;
+  text-align: left !important;
+}
+.sub-content a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1260px) {
+  .top-nav {
+    width: 167px;
+  }
+  .triangle {
+    width: 167px !important;
+  }
+}
 .owl-item {
   position: static;
 }
@@ -294,14 +346,14 @@ a {
 }
 
 .banner-item {
-  height: 700px;
+  height: 550px;
   position: relative;
   width: 100%;
 }
 
 .banner-carousel {
   color: #fff;
-  min-height: 740px !important;
+  min-height: 550px !important;
   min-width: 100vw !important;
   position: relative;
 }
@@ -312,13 +364,14 @@ a {
 .banner-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  margin-left: 50px;
   position: absolute;
   color: #fff;
-  top: 175px;
+  top: 20%;
   z-index: 4;
+  text-align: center;
+  width: 100%;
 }
 
 .banner-content h1 {
@@ -339,14 +392,13 @@ a {
 .banner-content a {
   padding: 5px 20px;
   font-size: 1.25rem;
-  font-size: 1.625rem;
   line-height: 2.5rem;
   margin-top: 1.938rem;
   margin-bottom: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  height: auto;
 }
 
 .banner-content i {
@@ -361,9 +413,6 @@ a {
 }
 
 @media (min-width: 992px) {
-  .banner-content {
-    margin-left: 150px;
-  }
   .banner-content h1 {
     font-size: 4rem;
     line-height: 5rem;
@@ -379,6 +428,12 @@ a {
 
 .row {
   margin-bottom: 50px;
+}
+
+.view-services {
+  font-size: 25px;
+  text-align: center;
+  margin: 15px 0 15px 0;
 }
 
 .carousel, .client-list {
@@ -666,7 +721,7 @@ a {
   width: auto;
   position: relative;
   transform: transalte(-50%, -50%);
-  top: 30%;
+  top: 10%;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
@@ -721,10 +776,15 @@ a {
 
 .cookie-buttons {
   text-decoration: none;
-  display: block;
   position: relative;
   margin: auto;
   text-align: center;
+  width: 250px;
+  height: 50px;
+  font-size: 1.063em !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .cookie-button {
@@ -815,7 +875,6 @@ a {
 .header {
   background-color: #fff;
   width: 100%;
-  padding-top: 0.5em;
   position: relative;
   top: 0;
   left: 0;
@@ -824,12 +883,13 @@ a {
 }
 
 .scroll-up header {
-  position: fixed;
+  position: fixed !important;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
 }
 
 .upper {
-  padding: 20px 15px;
+  padding: 20px 15px 5px 15px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
@@ -842,7 +902,6 @@ a {
 .name {
   float: left;
   font-size: 2em;
-  margin: auto;
   width: 100%;
   max-width: 392px;
 }
@@ -855,9 +914,14 @@ a {
 
 .important-nav {
   display: flex;
+  align-items: flex-start;
 }
 
-.name a,
+.name a {
+  padding: 0px 10px 10px 10px;
+  display: block;
+}
+
 .nav a {
   text-align: center;
   display: block;
@@ -950,7 +1014,7 @@ a {
 .search-bar {
   padding: 15px;
   height: 56px;
-  width: 240px;
+  width: 174px;
   margin-left: 10px;
 }
 
@@ -1048,7 +1112,7 @@ a {
 }
 
 .fa-star {
-  font-size: 50px;
+  font-size: 46px;
   color: orange;
   margin-bottom: 25px;
 }
@@ -1061,7 +1125,12 @@ a {
   font-size: 25px;
 }
 
+.hamburger i {
+  font-size: 30px;
+}
+
 .phone-icon {
+  color: #333645;
   display: block;
   width: 60px;
   font-size: 35px;
@@ -1697,36 +1766,43 @@ a {
 .banner-img-1 {
   background: url("../img/banner/lead-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-2 {
   background: url("../img/banner/bespoke-software-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-3 {
   background: url("../img/banner/it-support-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-4 {
   background: url("../img/banner/digital-marketing-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-5 {
   background: url("../img/banner/telemarketing-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-6 {
   background: url("../img/banner/web-design.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-7 {
   background: url("../img/banner/cyber-security-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .news-title-1 a {
