@@ -14,7 +14,7 @@ const main = document.querySelector('.main');
 const mainHeader = document.querySelector(".header");
 
 function openMenu() {
-    slide_menu.style.display = "block";
+    slide_menu.classList.toggle('side-menu_open');
     mainHeader.style.position = "relative";
     main.style.marginRight = "300px";
     mainHeader.style.marginRight = "300px";
@@ -24,7 +24,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-    slide_menu.style.display = "none";
+    slide_menu.classList.remove('side-menu_open');
     main.style.marginRight = "0px";
     mainHeader.style.position = "fixed";
     mainHeader.style.marginRight = "0px";
@@ -34,7 +34,7 @@ function closeMenu() {
 }
 
 menu_btn.addEventListener('click', function() {
-    if (slide_menu.style.display === 'block') {
+    if (slide_menu.classList.contains('side-menu_open')) {
         closeMenu();
     } else {
         openMenu();
@@ -42,7 +42,7 @@ menu_btn.addEventListener('click', function() {
 })
 
 backgroundFade.addEventListener('click', function(){
-    if (slide_menu.style.display === 'block') {
+    if (slide_menu.classList.contains('side-menu_open')) {
         closeMenu();
     }
 })

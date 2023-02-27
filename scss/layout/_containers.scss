@@ -360,18 +360,23 @@
 // side menu
 
 .side-menu{
-    display: none;
+    display: hidden;
 
     position: fixed;
     top: 0;
-    right: 0;
+    right: -350px;
 
     background-color: #333645;
     min-width: 275px;
     height: 100vh;
     overflow-x: hidden;
     z-index: 101;
-    transition: 0.4s;
+    transition: right 0.4s;
+}
+
+.side-menu_open{
+    display: block;
+    right: 0px;
 }
 
 
