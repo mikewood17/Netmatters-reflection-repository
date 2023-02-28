@@ -382,7 +382,7 @@
 .offices,
 .services{
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     align-items: flex-start;
 }
@@ -598,6 +598,7 @@
 
 .cookie-header{
     padding: 15px 20px;
+    width: inherit;
 }
 .cookie-popup h2 {
     margin: 0;
@@ -610,13 +611,14 @@
 .cookie-content {
     border-top: 1px solid #e5e5e5;
     padding: 20px;
+    width: inherit;
 }
 .cookie-popup p {
     font-size: 1rem;
     letter-spacing: .4px;
     color: #666;
-    text-align: justify;
-    margin: 20px 0;
+    margin: 0;
+    margin-bottom: 25px;
 }
 
 
@@ -628,7 +630,8 @@
     padding: 19px 20px 20px;
     text-align: right;
     border-top: 1px solid #e5e5e5;
-    height: 90px;
+    height: auto;
+    width: inherit;
 }
 
 .cookie-buttons{
@@ -636,7 +639,7 @@
     position: relative;
     margin: auto;
     text-align: center;
-    width: 250px;
+    width: auto;
     height: 50px;
     font-size: 1.063em !important;
     display: flex !important;
@@ -660,4 +663,15 @@
 .spacer{
     padding-left: 15px;
     padding-right: 15px;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .top-spacer{
+        margin-bottom: 30px;
+    }
+
+    .spacer{
+        width: 100%;
+    }
 }

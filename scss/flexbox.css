@@ -43,10 +43,6 @@
     .quote-author {
         font-size: 1.2em;
     }
-    .privacy-policy{
-        font-size: 1em;
-        font-weight: 300;
-    }
     .services,
     .offices {
         flex-direction: column;

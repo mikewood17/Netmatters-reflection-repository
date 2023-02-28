@@ -41,10 +41,10 @@
         border-color: transparent;
         top: -10px;
         transition: .5s ease !important;
+        cursor: pointer;
     }
 }
 .news{
-    width: 80%;
 	background: #fff;
 	margin: 0 .5em .8em;
     border: 1px solid #CCC;
@@ -93,10 +93,23 @@
 .signup {
     color: #666;
 	background: #ddd;
-    padding: 50px 50px;
+    padding: 50px 0px;
     margin-top: 20px;
 }
 
+.checkbox_container,
+.sign-up_body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.sign-up-button-container{
+    text-align: left;
+}
+
+.sign-up_info{
+    margin-bottom: 20px;
+}
 
 
 .item,

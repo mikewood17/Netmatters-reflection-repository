@@ -102,10 +102,10 @@ a {
   border-color: transparent;
   top: -10px;
   transition: 0.5s ease !important;
+  cursor: pointer;
 }
 
 .news {
-  width: 80%;
   background: #fff;
   margin: 0 0.5em 0.8em;
   border: 1px solid #CCC;
@@ -159,8 +159,22 @@ a {
 .signup {
   color: #666;
   background: #ddd;
-  padding: 50px 50px;
+  padding: 50px 0px;
   margin-top: 20px;
+}
+
+.checkbox_container,
+.sign-up_body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.sign-up-button-container {
+  text-align: left;
+}
+
+.sign-up_info {
+  margin-bottom: 20px;
 }
 
 .item,
@@ -540,7 +554,7 @@ a {
 .offices,
 .services {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
 }
@@ -740,6 +754,7 @@ a {
 }
 .cookie-header {
   padding: 15px 20px;
+  width: inherit;
 }
 
 .cookie-popup h2 {
@@ -753,14 +768,15 @@ a {
 .cookie-content {
   border-top: 1px solid #e5e5e5;
   padding: 20px;
+  width: inherit;
 }
 
 .cookie-popup p {
   font-size: 1rem;
   letter-spacing: 0.4px;
   color: #666;
-  text-align: justify;
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .cookie-button_container {
@@ -771,7 +787,8 @@ a {
   padding: 19px 20px 20px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
-  height: 90px;
+  height: auto;
+  width: inherit;
 }
 
 .cookie-buttons {
@@ -779,7 +796,7 @@ a {
   position: relative;
   margin: auto;
   text-align: center;
-  width: 250px;
+  width: auto;
   height: 50px;
   font-size: 1.063em !important;
   display: flex !important;
@@ -805,8 +822,17 @@ a {
 .spacer {
   padding-left: 15px;
   padding-right: 15px;
+  width: 50%;
 }
 
+@media (max-width: 768px) {
+  .top-spacer {
+    margin-bottom: 30px;
+  }
+  .spacer {
+    width: 100%;
+  }
+}
 .main-footer {
   text-align: center;
   background-color: #333645;
@@ -821,6 +847,7 @@ a {
 .office {
   padding: 15px;
   justify-content: space-evenly;
+  width: 50%;
 }
 
 .services,
@@ -880,6 +907,11 @@ a {
   left: 0;
   z-index: 100;
   transition: all 300ms ease-in-out;
+}
+
+.scroll-down header {
+  position: relative;
+  transform: translate3d(0, -100%, 0);
 }
 
 .scroll-up header {
@@ -1026,6 +1058,7 @@ a {
   height: 56px;
   width: 56px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .search-bar-mobile {
@@ -1054,6 +1087,7 @@ a {
   background-color: #4183d7;
   border-color: #4183d7;
   border-radius: 3px;
+  cursor: pointer;
 }
 .button-1 a {
   color: #fff;
@@ -1063,6 +1097,7 @@ a {
   background-color: #999aa2;
   border-color: #999aa2;
   border-radius: 3px;
+  cursor: pointer;
 }
 .button-2 a {
   color: #fff;
@@ -1123,6 +1158,7 @@ a {
   border-radius: 5%;
   width: 60px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .hamburger i {
@@ -1267,7 +1303,7 @@ a {
 }
 
 .news-img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .top-logo {

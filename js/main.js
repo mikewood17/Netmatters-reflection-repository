@@ -17,6 +17,7 @@ function openMenu() {
     slide_menu.classList.toggle('side-menu_open');
     mainHeader.style.position = "relative";
     main.style.marginRight = "300px";
+    main.style.marginLeft = "-300px";
     mainHeader.style.marginRight = "300px";
     backgroundFade.style.display = 'block';
     main.classList.toggle('menu-open');
@@ -26,6 +27,7 @@ function openMenu() {
 function closeMenu() {
     slide_menu.classList.remove('side-menu_open');
     main.style.marginRight = "0px";
+    main.style.marginLeft = "0px";
     // mainHeader.style.position = "fixed";
     // mainHeader.style.marginRight = "0px";
     backgroundFade.style.display = 'none';
@@ -59,7 +61,7 @@ window.addEventListener('scroll', () => {
         body.classList.remove("scroll-up")
     }
 
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down") && currentScroll > 350) {
         body.classList.remove("scroll-up");
         body.classList.add("scroll-down");
     }
@@ -113,7 +115,7 @@ if (localStorage.getItem('cookies')){
     cookiePopup.style.display = 'none';
     backgroundFade.style.display = 'none';
 } else {
-    cookiePopup.style.display = 'grid';
+    cookiePopup.style.display = 'block';
     backgroundFade.style.display = 'block';
     body.style.overflow = 'hidden';
 }
