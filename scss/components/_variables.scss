@@ -132,4 +132,8 @@
     .news-btn-#{$i} {
         background-color: $color;
     }
+
+    .tag-#{$i} {
+        background-color: $color !important;
+    }
 }

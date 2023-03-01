@@ -107,9 +107,10 @@ a {
 
 .news {
   background: #fff;
-  margin: 0 0.5em 0.8em;
+  margin: 0 15px 40px;
   border: 1px solid #CCC;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 3px 3px;
   position: relative;
   top: 0;
   transition: 0.5s ease;
@@ -447,7 +448,7 @@ a {
 
 .carousel, .client-list {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -459,7 +460,7 @@ a {
 #owl-two div {
   max-height: 120px !important;
   max-width: auto !important;
-  margin-right: 50px !important;
+  margin-right: 40px !important;
 }
 
 @media (max-width: 767px) {
@@ -692,22 +693,19 @@ a {
   position: relative;
   background-color: #333645;
   border-top: 0.5px solid rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0px -1px 1px #000;
 }
 
 .side-nav__item {
-  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
-  box-shadow: inset 0px -1px 1px #000;
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
   color: #fff;
-  padding: 1.25em 0 1.25em 1.25em;
   background-color: #282b36;
   font-size: 0.90625em;
 }
 .side-nav__item a {
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: block;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  padding: 15px 20px;
 }
 .side-nav__item i {
   font-size: 0.60625em;
@@ -989,9 +987,11 @@ a {
 .signup-button {
   color: #fff;
   text-align: center;
-  padding: 0.625em 1.25em;
+  line-height: 35px;
+  padding: 5px 15px;
   background: #333645;
   border-radius: 3px;
+  display: inline-block;
 }
 
 .banner-button {
@@ -1213,6 +1213,17 @@ a {
   margin-left: 13px;
 }
 
+.cat-tag {
+  position: absolute;
+  color: #fff;
+  background-color: #333645;
+  top: 10px;
+  right: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
 .topic-header {
   font-size: 40px;
 }
@@ -1284,7 +1295,7 @@ a {
 }
 
 .sign-up-input h3 {
-  font-size: 1.4em;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -1854,6 +1865,10 @@ a {
   background-color: #009b69;
 }
 
+.tag-1 {
+  background-color: #009b69 !important;
+}
+
 .news-title-2 a {
   color: #2a63ac;
 }
@@ -1862,10 +1877,18 @@ a {
   background-color: #2a63ac;
 }
 
+.tag-2 {
+  background-color: #2a63ac !important;
+}
+
 .news-title-3 a {
   color: #ce4125;
 }
 
 .news-btn-3 {
   background-color: #ce4125;
+}
+
+.tag-3 {
+  background-color: #ce4125 !important;
 }/*# sourceMappingURL=application.css.map */

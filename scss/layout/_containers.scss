@@ -260,7 +260,7 @@
 
 .carousel, .client-list{
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     display: flex;
     flex-direction: row;
@@ -272,7 +272,7 @@
 #owl-two div {
     max-height: 120px !important;
     max-width: auto !important;
-    margin-right: 50px !important;
+    margin-right: 40px !important;
 }
 // .owl-item{
 //     max-height: 120px !important;
@@ -534,21 +534,18 @@
 
     background-color: #333645;
     border-top: 0.5px solid rgba(255,255,255,0.05);
-    box-shadow: inset 0px -1px 1px #000;
 }
 
 .side-nav__item{
-    border-top: 1px solid hsla(0,0%,100%,.05);
-    box-shadow: inset 0px -1px 1px #000;
+    border-top: 1px solid rgba(0,0,0,.45);
     color: #fff;
-    padding: 1.25em 0 1.25em 1.25em;
     background-color: #282b36;
     font-size: .90625em;
     a {
         color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        display: block;
+        border-top: 1px solid hsla(0,0%,100%,.05);
+        padding: 15px 20px;
     }
     i {
         font-size: .60625em;
