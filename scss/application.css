@@ -106,6 +106,7 @@ a {
 }
 
 .news {
+  cursor: pointer;
   background: #fff;
   margin: 0 15px 40px;
   border: 1px solid #CCC;
