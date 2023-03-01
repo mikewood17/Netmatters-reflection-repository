@@ -17,9 +17,6 @@ function openMenu() {
     menu_btn.classList.toggle('is-active');
     slide_menu.classList.toggle('side-menu_open');
     mainHeader.style.position = "relative";
-    main.style.marginRight = "300px";
-    main.style.marginLeft = "-300px";
-    mainHeader.style.marginRight = "300px";
     backgroundFade.style.display = 'block';
     main.classList.toggle('menu-open');
     body.classList.add('no-scroll');
@@ -40,7 +37,16 @@ function closeMenu() {
 menu_btn.addEventListener('click', function() {
     if (slide_menu.classList.contains('side-menu_open')) {
         closeMenu();
+    } else if ($(window).width() > 992) {
+        main.style.marginRight = "300px";
+        main.style.marginLeft = "-300px";
+        mainHeader.style.marginRight = "300px";
+        openMenu();
+
     } else {
+        main.style.marginRight = "275px";
+        main.style.marginLeft = "-275px";
+        mainHeader.style.marginRight = "275px";
         openMenu();
     }
 })

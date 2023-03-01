@@ -593,7 +593,7 @@ a {
   top: 0;
   right: -350px;
   background-color: #333645;
-  min-width: 275px;
+  width: 275px;
   height: 100vh;
   overflow-x: hidden;
   z-index: 101;
@@ -1006,6 +1006,28 @@ a {
   justify-content: space-evenly;
 }
 
+.owl-dot {
+  position: relative;
+  height: 23px;
+  width: 23px;
+  margin: 0 5px;
+}
+
+.owl-dot span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-120%, -95%);
+}
+
+.owl-carousel button.owl-dot.active {
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+.owl-carousel button.owl-dot.active span {
+  background-color: #fff !important;
+}
+
 .button {
   display: inline-block;
   margin-bottom: 0;
@@ -1187,10 +1209,12 @@ a {
 .hamburger-inner::after {
   background-color: #fff !important;
   border-radius: 0px !important;
+  width: 30px !important;
 }
 
-.hamburger i {
-  font-size: 30px;
+.hamburger-box {
+  top: 10%;
+  left: 10%;
 }
 
 .phone-icon {

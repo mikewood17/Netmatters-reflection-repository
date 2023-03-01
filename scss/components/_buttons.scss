@@ -35,6 +35,32 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+.owl-dot{
+    position: relative;
+    height: 23px;
+    width: 23px;
+    margin: 0 5px;
+}
+
+
+.owl-dot span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%, -95%);
+}
+
+.owl-carousel button.owl-dot.active{
+    
+    border: 2px solid #fff;
+    border-radius: 100%;
+
+    span{
+        background-color: #fff !important;
+    }
+}
+
 .button {
     &:hover{
     text-decoration: none;
