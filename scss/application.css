@@ -220,8 +220,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .search {
@@ -1088,30 +1086,29 @@ a {
   outline: none;
 }
 
+.main-nav_btn {
+  padding: 0 !important;
+}
+
 .button-1 {
   background-color: #4183d7;
   border-color: #4183d7;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.button-1 a {
-  color: #fff;
 }
 
 .button-2 {
   background-color: #999aa2;
   border-color: #999aa2;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.button-2 a {
-  color: #fff;
 }
 
-.button-1 a, .button-2 a {
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
+.button-1, .button-2 {
+  text-transform: uppercase;
+  display: block;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+.button-1 i, .button-2 i {
+  margin-right: 5px;
 }
 
 .checkbox {
@@ -1164,6 +1161,7 @@ a {
   width: 60px;
   font-size: 25px;
   cursor: pointer;
+  margin: 0 0 15px 15px !important;
 }
 
 .hamburger i {

@@ -111,28 +111,29 @@
     outline: none;
 }
 
+.main-nav_btn{
+    padding: 0 !important;
+}
+
 .button-1 {
     background-color: #4183d7;
     border-color: #4183d7;
-    border-radius: 3px;
-    cursor: pointer;
-    a {
-    color:#fff;
-    }
+    
 }
 .button-2 {
     background-color: #999aa2;
     border-color: #999aa2;
+}
+.button-1, .button-2 {
+    text-transform: uppercase;
+    display: block;
     border-radius: 3px;
     cursor: pointer;
-    a {
     color:#fff;
+
+    i {
+        margin-right: 5px;
     }
-}
-.button-1 a, .button-2 a{
-    display: flex;
-    gap: 10px;
-    justify-content: space-around;
 }
 .checkbox {
     height: 32px;
