@@ -244,10 +244,6 @@
 }
 // Primary content container
 
-.our-services-container{
-    // margin-top: 300px; was using with sticky header but cant get it to function with slide nav
-    margin-bottom: 50px;
-}
 
 .row {
     margin-bottom: 50px;
@@ -350,6 +346,12 @@
     align-items: flex-start;
 }
 
+@media (min-width: 592px) and (max-width: 992px){
+    .review-btn-container{
+        flex-direction: row;
+    }
+}
+
 
 // News section container
 
@@ -383,9 +385,17 @@
 .services{
     display:flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
     align-items: flex-start;
+    flex-direction: column;
 }
+
+@media(min-width: 768px) {
+    .offices,
+    .services{
+        flex-direction: row;
+    }
+}
+
 .footer-license{
     display: flex;
 }

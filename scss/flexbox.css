@@ -43,11 +43,7 @@
     .quote-author {
         font-size: 1.2em;
     }
-    .services,
-    .offices {
-        flex-direction: column;
-        align-items: center;
-    }
+   
     .footer-bottom{
         justify-content: center;
     }
@@ -264,7 +260,6 @@
     }
     .offices {
         display: inline-flex;
-        flex-wrap: wrap;
         flex-direction: row;
     }
     
@@ -289,7 +284,7 @@
     .footer-row{
         display: flex;
         align-items: baseline;
-        justify-content: center;
+        justify-content: space-between;
 
     }
 
