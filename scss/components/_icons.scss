@@ -5,13 +5,21 @@
 }
 
 .hamburger{
+    padding: 15px 5px !important;
     color: #fff;
-    background-color: #333645;
+    background-color: #333645 !important;
     border-radius: 5%;
     width: 60px;
     font-size: 25px;
     cursor: pointer;
     margin: 0 0 15px 15px !important;
+}
+
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after{
+    background-color: #fff !important;
+    border-radius: 0px !important;
 }
 
 .hamburger i {

@@ -14,6 +14,7 @@ const main = document.querySelector('.main');
 const mainHeader = document.querySelector(".header");
 
 function openMenu() {
+    menu_btn.classList.toggle('is-active');
     slide_menu.classList.toggle('side-menu_open');
     mainHeader.style.position = "relative";
     main.style.marginRight = "300px";
@@ -25,6 +26,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+    menu_btn.classList.remove('is-active');
     slide_menu.classList.remove('side-menu_open');
     main.style.marginRight = "0px";
     main.style.marginLeft = "0px";
@@ -99,6 +101,70 @@ $(document).ready(function(){
         autoWidth: true
     });
 });
+
+// search toggle
+
+const searchBtn = document.querySelector('.search-btn');
+const searchBar = document.querySelector('.search-bar');
+const btnContain = document.querySelector('.container_button');
+const contactBtn = document.querySelector('.button-2');
+const supportBtn = document.querySelector('.button-1');
+
+function openSearch(){
+    btnContain.style.display = 'none';
+    $(".search-bar").fadeIn("slow");
+    searchBtn.style.borderRadius = '0 3px 3px 0';
+    searchBar.style.display = 'flex';
+    searchBar.style.width = '300px';
+    
+}
+
+function closeSearch(){
+    $(".search-bar").fadeOut("100");
+    searchBtn.style.borderRadius = '3px';
+    $(".container_button").fadeIn('slow');
+    btnContain.style.display = 'flex';
+    searchBar.style.display = 'none';
+    searchBar.style.width = '174px';
+}
+
+searchBtn.addEventListener('click', function(){
+    if (searchBar.style.display == 'none' && $(window).width() > 992 ){
+        openSearch();
+
+    } else if($(window).width() < 992){
+        
+        
+    } else {
+        
+        closeSearch();
+    }
+})
+
+
+
+// checkbox 
+
+const checkbox = document.querySelector('.checkbox');
+
+function checkedbox() {
+    checkbox.classList.add("checked");
+    checkbox.innerHTML = '<i class="fa-solid fa-check checkmark"></i>';
+}
+
+function uncheckbox(){
+    checkbox.classList.remove("checked");
+    checkbox.innerHTML = '';
+}
+
+checkbox.addEventListener('click', function(){
+   if (!this.classList.contains("checked")){
+        checkedbox();
+   } else {
+        uncheckbox();
+   }
+})
+
 // cookie popup
 
 const cookieButton = document.querySelector('.cookie-button');

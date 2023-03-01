@@ -17,7 +17,7 @@
 }
   
 .scroll-up header {
-    position: fixed !important;
+    position: sticky !important;
     box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
     transition: all 0.5s;
 }
@@ -51,7 +51,7 @@
 
 
 .name a {
-    padding: 0px 10px 10px 10px;
+    padding: 0px 10px 0px 10px;
     display:block;
 }
 .nav a {

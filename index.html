@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="js/owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="js/owl/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="scss/application.css">
+    <link href="css/hamburgers.css" rel="stylesheet">
 	<link rel="stylesheet" href="scss/flexbox.css">
 </head>
 <body class="Wrapper" style="overflow:auto;">
@@ -49,9 +50,11 @@
                             <div class="hidden-sm hidden-md hidden-lg">
                                 <a href="#"><i class="phone-icon fa-solid fa-phone-volume"></i></a>
                             </div>
-                            <div>
-                                <a class="hamburger button-4 nav-btn"><i class="fa-solid fa-bars"></i></a>
-                            </div>
+                            <button class="hamburger hamburger--spin button-4 nav-btn" type="button">
+                                <span class="hamburger-box">
+                                  <span class="hamburger-inner"></span>
+                                </span>
+                              </button>
                         </div>
                     </div>
                 </div>
@@ -690,7 +693,8 @@
                     <div class="sign-up-button-container">
                         <div class="sign-up_info">
                             <div class="checkbox-container">
-                                <input type="checkbox" class="checkbox">
+                                <span class="checkbox"></span>
+                                <input type="checkbox">
                             </div>
                             <div class="sign-up_body">
                                 <span class="privacy-policy">	Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</span>

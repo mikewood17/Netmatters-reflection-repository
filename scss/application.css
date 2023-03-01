@@ -917,7 +917,7 @@ a {
 }
 
 .scroll-up header {
-  position: fixed !important;
+  position: sticky !important;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
 }
@@ -952,7 +952,7 @@ a {
 }
 
 .name a {
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
   display: block;
 }
 
@@ -1054,6 +1054,11 @@ a {
   margin-left: 10px;
 }
 
+@media (max-width: 992px) {
+  .search-bar {
+    width: 174px !important;
+  }
+}
 .search-btn {
   color: #fff;
   background-color: #999aa2;
@@ -1113,17 +1118,28 @@ a {
 }
 
 .checkbox {
+  border-radius: 3px;
+  border: 3px solid #333645;
   height: 32px;
   width: 32px;
   position: relative;
   float: left;
-  margin-right: 30px;
+  margin-right: 20px;
   margin-bottom: 30px;
   cursor: pointer;
 }
-.checkbox:checked {
-  accent-color: #333645 !important;
-  border-color: #333645 !important;
+
+.checked {
+  background-color: #333645 !important;
+}
+
+.checkmark {
+  padding: 3px;
+  font-size: 20px;
+}
+
+.checkbox-container input {
+  display: none;
 }
 
 .read-more {
@@ -1156,13 +1172,21 @@ a {
 }
 
 .hamburger {
+  padding: 15px 5px !important;
   color: #fff;
-  background-color: #333645;
+  background-color: #333645 !important;
   border-radius: 5%;
   width: 60px;
   font-size: 25px;
   cursor: pointer;
   margin: 0 0 15px 15px !important;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #fff !important;
+  border-radius: 0px !important;
 }
 
 .hamburger i {
@@ -1314,6 +1338,7 @@ a {
 }
 
 .privacy-policy a {
+  color: #333645;
   text-decoration: underline;
 }
 
