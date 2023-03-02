@@ -586,6 +586,10 @@ a {
 .social-media {
   display: flex;
 }
+.social-media a {
+  border-radius: 50%;
+  width: 38px;
+}
 
 .side-menu {
   display: hidden;
@@ -968,6 +972,10 @@ a {
 
 .nav-icon:hover {
   color: #fff;
+}
+
+.sub-content a {
+  text-transform: none !important;
 }
 
 /* ----- Component Imports ----- */

@@ -412,6 +412,11 @@
 }
 .social-media{
     display: flex;
+
+    a{
+        border-radius: 50%;
+        width: 38px;
+    }
 }
 
 
