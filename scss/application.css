@@ -1178,7 +1178,7 @@ a {
 
 .review-btn {
   border-radius: 6px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   font-size: 20px;
   margin-right: 8px;
   margin-bottom: 20px;
@@ -1262,10 +1262,6 @@ a {
 .required:after {
   content: " *";
   color: #d24d57;
-}
-
-.fa-arrow-right {
-  margin-left: 13px;
 }
 
 .cat-tag {

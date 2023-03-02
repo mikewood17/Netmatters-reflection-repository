@@ -290,4 +290,8 @@
 
     }
 
+    .review-btn-container{
+        flex-direction: row;
+    }
+
 }
