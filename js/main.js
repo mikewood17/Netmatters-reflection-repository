@@ -14,35 +14,45 @@ const main = document.querySelector('.main');
 const mainHeader = document.querySelector(".header");
 
 function openMenu() {
-    slide_menu.style.display = "block";
+    menu_btn.classList.toggle('is-active');
+    slide_menu.classList.toggle('side-menu_open');
     mainHeader.style.position = "relative";
-    main.style.marginRight = "300px";
-    mainHeader.style.marginRight = "300px";
     backgroundFade.style.display = 'block';
     main.classList.toggle('menu-open');
-    // body[0].style.overflow = 'hidden';
+    body.classList.add('no-scroll');
 }
 
 function closeMenu() {
-    slide_menu.style.display = "none";
+    menu_btn.classList.remove('is-active');
+    slide_menu.classList.remove('side-menu_open');
     main.style.marginRight = "0px";
-    mainHeader.style.position = "fixed";
-    mainHeader.style.marginRight = "0px";
+    main.style.marginLeft = "0px";
+    // mainHeader.style.position = "fixed";
+    // mainHeader.style.marginRight = "0px";
     backgroundFade.style.display = 'none';
     main.classList.toggle('menu-open');
-    // body[0].style.overflow = 'scroll';
+    body.classList.remove('no-scroll');
 }
 
 menu_btn.addEventListener('click', function() {
-    if (slide_menu.style.display === 'block') {
+    if (slide_menu.classList.contains('side-menu_open')) {
         closeMenu();
+    } else if ($(window).width() > 992) {
+        main.style.marginRight = "300px";
+        main.style.marginLeft = "-300px";
+        mainHeader.style.marginRight = "300px";
+        openMenu();
+
     } else {
+        main.style.marginRight = "275px";
+        main.style.marginLeft = "-275px";
+        mainHeader.style.marginRight = "275px";
         openMenu();
     }
 })
 
 backgroundFade.addEventListener('click', function(){
-    if (slide_menu.style.display === 'block') {
+    if (slide_menu.classList.contains('side-menu_open')) {
         closeMenu();
     }
 })
@@ -59,7 +69,7 @@ window.addEventListener('scroll', () => {
         body.classList.remove("scroll-up")
     }
 
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down") && currentScroll > 350) {
         body.classList.remove("scroll-up");
         body.classList.add("scroll-down");
     }
@@ -97,6 +107,70 @@ $(document).ready(function(){
         autoWidth: true
     });
 });
+
+// search toggle
+
+const searchBtn = document.querySelector('.search-btn');
+const searchBar = document.querySelector('.search-bar');
+const btnContain = document.querySelector('.container_button');
+const contactBtn = document.querySelector('.button-2');
+const supportBtn = document.querySelector('.button-1');
+
+function openSearch(){
+    btnContain.style.display = 'none';
+    $(".search-bar").fadeIn("slow");
+    searchBtn.style.borderRadius = '0 3px 3px 0';
+    searchBar.style.display = 'flex';
+    searchBar.style.width = '300px';
+    
+}
+
+function closeSearch(){
+    $(".search-bar").fadeOut("100");
+    searchBtn.style.borderRadius = '3px';
+    $(".container_button").fadeIn('slow');
+    btnContain.style.display = 'flex';
+    searchBar.style.display = 'none';
+    searchBar.style.width = '174px';
+}
+
+searchBtn.addEventListener('click', function(){
+    if (searchBar.style.display == 'none' && $(window).width() > 992 ){
+        openSearch();
+
+    } else if($(window).width() < 992){
+        
+        
+    } else {
+        
+        closeSearch();
+    }
+})
+
+
+
+// checkbox 
+
+const checkbox = document.querySelector('.checkbox');
+
+function checkedbox() {
+    checkbox.classList.add("checked");
+    checkbox.innerHTML = '<i class="fa-solid fa-check checkmark"></i>';
+}
+
+function uncheckbox(){
+    checkbox.classList.remove("checked");
+    checkbox.innerHTML = '';
+}
+
+checkbox.addEventListener('click', function(){
+   if (!this.classList.contains("checked")){
+        checkedbox();
+   } else {
+        uncheckbox();
+   }
+})
+
 // cookie popup
 
 const cookieButton = document.querySelector('.cookie-button');
@@ -113,7 +187,7 @@ if (localStorage.getItem('cookies')){
     cookiePopup.style.display = 'none';
     backgroundFade.style.display = 'none';
 } else {
-    cookiePopup.style.display = 'grid';
+    cookiePopup.style.display = 'block';
     backgroundFade.style.display = 'block';
     body.style.overflow = 'hidden';
 }

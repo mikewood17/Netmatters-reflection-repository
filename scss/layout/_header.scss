@@ -2,7 +2,6 @@
 .header{
     background-color: #fff;
     width: 100%;
-	padding-top: .5em;
     position: relative;
     top: 0;
     left: 0;
@@ -13,17 +12,18 @@
 // Scroll stuff
 
 .scroll-down header {
-    // position: relative;
-    // transform: translate3d(0, -100%, 0)
+    position: relative;
+    transform: translate3d(0, -100%, 0)
 }
   
 .scroll-up header {
-    position: fixed;
+    position: sticky !important;
     box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
+    transition: all 0.5s;
 }
 
 .upper {
-    padding: 20px 15px;
+    padding: 20px 15px 5px 15px;
     background-color: #fff;
     display: flex;
     flex-direction: row;
@@ -35,7 +35,6 @@
 .name {
     float: left;
 	font-size: 2em;
-	margin: auto;
     width: 100%;
     max-width: 392px;
 }
@@ -47,10 +46,14 @@
 
 .important-nav {
     display: flex;
+    align-items: flex-start;
 }
 
 
-.name a,
+.name a {
+    padding: 0px 10px 0px 10px;
+    display:block;
+}
 .nav a {
 	text-align: center;
 	display: block;
@@ -62,4 +65,8 @@
 }
 .nav-icon:hover{
     color: #fff;
+}
+
+.sub-content a {
+    text-transform: none !important;
 }

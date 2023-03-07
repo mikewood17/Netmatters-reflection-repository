@@ -17,8 +17,15 @@ body {
   overflow-x: hidden;
 }
 
+.no-scroll {
+  position: fixed;
+  inline-size: 100%;
+  overflow-y: scroll;
+}
+
 .main {
   margin-right: 0;
+  transition: all 0.5s;
 }
 
 div {
@@ -95,14 +102,16 @@ a {
   border-color: transparent;
   top: -10px;
   transition: 0.5s ease !important;
+  cursor: pointer;
 }
 
 .news {
-  width: 80%;
+  cursor: pointer;
   background: #fff;
-  margin: 0 0.5em 0.8em;
+  margin: 0 15px 40px;
   border: 1px solid #CCC;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 3px 3px;
   position: relative;
   top: 0;
   transition: 0.5s ease;
@@ -152,8 +161,21 @@ a {
 .signup {
   color: #666;
   background: #ddd;
-  padding: 50px 50px;
-  margin-top: 20px;
+  padding: 50px 0px;
+}
+
+.checkbox_container,
+.sign-up_body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.sign-up-button-container {
+  text-align: left;
+}
+
+.sign-up_info {
+  margin-bottom: 30px;
 }
 
 .item,
@@ -199,8 +221,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .search {
@@ -208,7 +228,6 @@ a {
 }
 
 .search-form {
-  margin-top: 11px;
   position: relative;
 }
 
@@ -240,7 +259,7 @@ a {
 }
 
 .top-nav {
-  width: 200px;
+  width: 134px;
   font-size: 1.125rem;
 }
 
@@ -256,7 +275,7 @@ a {
   z-index: 99;
   background-color: #333645;
   position: absolute;
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 50px;
   visibility: hidden;
 }
@@ -266,13 +285,60 @@ a {
 }
 .top-nav:hover .triangle {
   visibility: visible;
-  width: 200px;
+  width: 134px;
   height: 35px;
   transform: translate(-14px, 0px);
   -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0%);
           clip-path: polygon(0 0, 50% 100%, 100% 0%);
 }
 
+.sub-title {
+  font-size: 2rem !important;
+  width: 100% !important;
+  color: #fff !important;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.sub-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: -15px;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.sub-content li {
+  display: flex;
+  align-items: center;
+  width: 33%;
+  font-weight: 300;
+}
+
+.sub-content i {
+  margin-right: 10px;
+}
+
+.sub-content a {
+  font-size: 1.2rem !important;
+  padding: 0.625rem 0.938rem 0.625rem 0 !important;
+  text-align: left !important;
+}
+.sub-content a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1260px) {
+  .top-nav {
+    width: 167px;
+  }
+  .triangle {
+    width: 167px !important;
+  }
+}
 .owl-item {
   position: static;
 }
@@ -293,14 +359,14 @@ a {
 }
 
 .banner-item {
-  height: 700px;
+  height: 550px;
   position: relative;
   width: 100%;
 }
 
 .banner-carousel {
   color: #fff;
-  min-height: 740px !important;
+  min-height: 550px !important;
   min-width: 100vw !important;
   position: relative;
 }
@@ -311,13 +377,14 @@ a {
 .banner-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  margin-left: 50px;
   position: absolute;
   color: #fff;
-  top: 175px;
+  top: 20%;
   z-index: 4;
+  text-align: center;
+  width: 100%;
 }
 
 .banner-content h1 {
@@ -338,14 +405,13 @@ a {
 .banner-content a {
   padding: 5px 20px;
   font-size: 1.25rem;
-  font-size: 1.625rem;
   line-height: 2.5rem;
   margin-top: 1.938rem;
   margin-bottom: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  height: auto;
 }
 
 .banner-content i {
@@ -360,9 +426,6 @@ a {
 }
 
 @media (min-width: 992px) {
-  .banner-content {
-    margin-left: 150px;
-  }
   .banner-content h1 {
     font-size: 4rem;
     line-height: 5rem;
@@ -372,17 +435,19 @@ a {
     line-height: 2.5rem;
   }
 }
-.our-services-container {
-  margin-bottom: 50px;
-}
-
 .row {
   margin-bottom: 50px;
 }
 
+.view-services {
+  font-size: 25px;
+  text-align: center;
+  margin: 15px 0 15px 0;
+}
+
 .carousel, .client-list {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -394,7 +459,7 @@ a {
 #owl-two div {
   max-height: 120px !important;
   max-width: auto !important;
-  margin-right: 50px !important;
+  margin-right: 40px !important;
 }
 
 @media (max-width: 767px) {
@@ -453,6 +518,11 @@ a {
   align-items: flex-start;
 }
 
+@media (min-width: 592px) and (max-width: 992px) {
+  .review-btn-container {
+    flex-direction: row;
+  }
+}
 .news-container {
   display: flex;
   flex-wrap: wrap;
@@ -484,11 +554,17 @@ a {
 .offices,
 .services {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .offices,
+  .services {
+    flex-direction: row;
+  }
+}
 .footer-license {
   display: flex;
 }
@@ -510,18 +586,27 @@ a {
 .social-media {
   display: flex;
 }
+.social-media a {
+  border-radius: 50%;
+  width: 38px;
+}
 
 .side-menu {
-  display: none;
+  display: hidden;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -350px;
   background-color: #333645;
-  min-width: 275px;
+  width: 275px;
   height: 100vh;
   overflow-x: hidden;
   z-index: 101;
-  transition: 0.4s;
+  transition: right 0.4s;
+}
+
+.side-menu_open {
+  display: block;
+  right: 0px;
 }
 
 .side-menu__small {
@@ -578,7 +663,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   outline: 1px solid rgba(0, 0, 0, 0.25);
-  border: 1px solid hsla(0deg, 0%, 100%, 0.1);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
 .sm_service-items {
@@ -611,22 +696,19 @@ a {
   position: relative;
   background-color: #333645;
   border-top: 0.5px solid rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0px -1px 1px #000;
 }
 
 .side-nav__item {
-  border-top: 1px solid hsla(0deg, 0%, 100%, 0.05);
-  box-shadow: inset 0px -1px 1px #000;
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
   color: #fff;
-  padding: 1.25em 0 1.25em 1.25em;
   background-color: #282b36;
   font-size: 0.90625em;
 }
 .side-nav__item a {
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: block;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  padding: 15px 20px;
 }
 .side-nav__item i {
   font-size: 0.60625em;
@@ -660,7 +742,7 @@ a {
   width: auto;
   position: relative;
   transform: transalte(-50%, -50%);
-  top: 30%;
+  top: 10%;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
@@ -679,6 +761,7 @@ a {
 }
 .cookie-header {
   padding: 15px 20px;
+  width: inherit;
 }
 
 .cookie-popup h2 {
@@ -692,14 +775,15 @@ a {
 .cookie-content {
   border-top: 1px solid #e5e5e5;
   padding: 20px;
+  width: inherit;
 }
 
 .cookie-popup p {
   font-size: 1rem;
   letter-spacing: 0.4px;
   color: #666;
-  text-align: justify;
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .cookie-button_container {
@@ -710,15 +794,21 @@ a {
   padding: 19px 20px 20px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
-  height: 90px;
+  height: auto;
+  width: inherit;
 }
 
 .cookie-buttons {
   text-decoration: none;
-  display: block;
   position: relative;
   margin: auto;
   text-align: center;
+  width: auto;
+  height: 50px;
+  font-size: 1.063em !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .cookie-button {
@@ -739,10 +829,18 @@ a {
 .spacer {
   padding-left: 15px;
   padding-right: 15px;
+  width: 50%;
 }
 
+@media (max-width: 768px) {
+  .top-spacer {
+    margin-bottom: 30px;
+  }
+  .spacer {
+    width: 100%;
+  }
+}
 .main-footer {
-  text-align: center;
   background-color: #333645;
   color: #fff;
   padding: 47px 0 43px;
@@ -755,6 +853,7 @@ a {
 .office {
   padding: 15px;
   justify-content: space-evenly;
+  width: 50%;
 }
 
 .services,
@@ -781,7 +880,7 @@ a {
 .service label {
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 26px;
   font-weight: 500;
 }
@@ -805,11 +904,10 @@ a {
   margin-bottom: 15px;
 }
 
-/*# sourceMappingURL=header.css.map */
+
 .header {
   background-color: #fff;
   width: 100%;
-  padding-top: 0.5em;
   position: relative;
   top: 0;
   left: 0;
@@ -817,13 +915,19 @@ a {
   transition: all 300ms ease-in-out;
 }
 
+.scroll-down header {
+  position: relative;
+  transform: translate3d(0, -100%, 0);
+}
+
 .scroll-up header {
-  position: fixed;
+  position: sticky !important;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
 }
 
 .upper {
-  padding: 20px 15px;
+  padding: 20px 15px 5px 15px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
@@ -836,7 +940,6 @@ a {
 .name {
   float: left;
   font-size: 2em;
-  margin: auto;
   width: 100%;
   max-width: 392px;
 }
@@ -849,9 +952,14 @@ a {
 
 .important-nav {
   display: flex;
+  align-items: flex-start;
 }
 
-.name a,
+.name a {
+  padding: 0px 10px 0px 10px;
+  display: block;
+}
+
 .nav a {
   text-align: center;
   display: block;
@@ -864,6 +972,10 @@ a {
 
 .nav-icon:hover {
   color: #fff;
+}
+
+.sub-content a {
+  text-transform: none !important;
 }
 
 /* ----- Component Imports ----- */
@@ -882,9 +994,11 @@ a {
 .signup-button {
   color: #fff;
   text-align: center;
-  padding: 0.625em 1.25em;
+  line-height: 35px;
+  padding: 5px 15px;
   background: #333645;
   border-radius: 3px;
+  display: inline-block;
 }
 
 .banner-button {
@@ -898,6 +1012,28 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.owl-dot {
+  position: relative;
+  height: 23px;
+  width: 23px;
+  margin: 0 5px;
+}
+
+.owl-dot span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-120%, -95%);
+}
+
+.owl-carousel button.owl-dot.active {
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+.owl-carousel button.owl-dot.active span {
+  background-color: #fff !important;
 }
 
 .button {
@@ -916,7 +1052,6 @@ a {
   border-radius: 3px;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   color: #fff;
 }
@@ -945,10 +1080,15 @@ a {
 .search-bar {
   padding: 15px;
   height: 56px;
-  width: 240px;
+  width: 174px;
   margin-left: 10px;
 }
 
+@media (max-width: 992px) {
+  .search-bar {
+    width: 174px !important;
+  }
+}
 .search-btn {
   color: #fff;
   background-color: #999aa2;
@@ -957,12 +1097,13 @@ a {
   height: 56px;
   width: 56px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .search-bar-mobile {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.1);
-  outline: 1px solid hsla(0deg, 0%, 100%, 0.2);
+  outline: 1px solid hsla(0, 0%, 100%, 0.2);
   border: 2px solid rgba(0, 0, 0, 0.1);
   transition: none;
   width: 100%;
@@ -981,42 +1122,54 @@ a {
   outline: none;
 }
 
+.main-nav_btn {
+  padding: 0 !important;
+}
+
 .button-1 {
   background-color: #4183d7;
   border-color: #4183d7;
-  border-radius: 3px;
-}
-.button-1 a {
-  color: #fff;
 }
 
 .button-2 {
   background-color: #999aa2;
   border-color: #999aa2;
-  border-radius: 3px;
-}
-.button-2 a {
-  color: #fff;
 }
 
-.button-1 a, .button-2 a {
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
+.button-1, .button-2 {
+  text-transform: uppercase;
+  display: block;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+.button-1 i, .button-2 i {
+  margin-right: 5px;
 }
 
 .checkbox {
+  border-radius: 3px;
+  border: 3px solid #333645;
   height: 32px;
   width: 32px;
   position: relative;
   float: left;
-  margin-right: 30px;
+  margin-right: 20px;
   margin-bottom: 30px;
   cursor: pointer;
 }
-.checkbox:checked {
-  accent-color: #333645 !important;
-  border-color: #333645 !important;
+
+.checked {
+  background-color: #333645 !important;
+}
+
+.checkmark {
+  padding: 3px;
+  font-size: 20px;
+}
+
+.checkbox-container input {
+  display: none;
 }
 
 .read-more {
@@ -1025,7 +1178,7 @@ a {
 
 .review-btn {
   border-radius: 6px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   font-size: 20px;
   margin-right: 8px;
   margin-bottom: 20px;
@@ -1043,20 +1196,37 @@ a {
 }
 
 .fa-star {
-  font-size: 50px;
+  font-size: 46px;
   color: orange;
   margin-bottom: 25px;
 }
 
 .hamburger {
+  padding: 15px 5px !important;
   color: #fff;
-  background-color: #333645;
+  background-color: #333645 !important;
   border-radius: 5%;
   width: 60px;
   font-size: 25px;
+  cursor: pointer;
+  margin: 0 0 15px 15px !important;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #fff !important;
+  border-radius: 0px !important;
+  width: 30px !important;
+}
+
+.hamburger-box {
+  top: 10%;
+  left: 10%;
 }
 
 .phone-icon {
+  color: #333645;
   display: block;
   width: 60px;
   font-size: 35px;
@@ -1094,8 +1264,15 @@ a {
   color: #d24d57;
 }
 
-.fa-arrow-right {
-  margin-left: 13px;
+.cat-tag {
+  position: absolute;
+  color: #fff;
+  background-color: #333645;
+  top: 10px;
+  right: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 10px;
 }
 
 .topic-header {
@@ -1169,12 +1346,12 @@ a {
 }
 
 .sign-up-input h3 {
-  font-size: 1.4em;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .sign-up-button-container {
-  font-size: 1.3em;
+  font-size: 1.063rem;
   color: #333645;
 }
 .sign-up-button-container i {
@@ -1189,11 +1366,12 @@ a {
 }
 
 .privacy-policy a {
+  color: #333645;
   text-decoration: underline;
 }
 
 .news-img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .top-logo {
@@ -1692,36 +1870,43 @@ a {
 .banner-img-1 {
   background: url("../img/banner/lead-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-2 {
   background: url("../img/banner/bespoke-software-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-3 {
   background: url("../img/banner/it-support-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-4 {
   background: url("../img/banner/digital-marketing-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-5 {
   background: url("../img/banner/telemarketing-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-6 {
   background: url("../img/banner/web-design.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .banner-img-7 {
   background: url("../img/banner/cyber-security-banner.webp") no-repeat;
   background-size: cover;
+  background-position: right center;
 }
 
 .news-title-1 a {
@@ -1732,6 +1917,10 @@ a {
   background-color: #009b69;
 }
 
+.tag-1 {
+  background-color: #009b69 !important;
+}
+
 .news-title-2 a {
   color: #2a63ac;
 }
@@ -1740,10 +1929,18 @@ a {
   background-color: #2a63ac;
 }
 
+.tag-2 {
+  background-color: #2a63ac !important;
+}
+
 .news-title-3 a {
   color: #ce4125;
 }
 
 .news-btn-3 {
   background-color: #ce4125;
+}
+
+.tag-3 {
+  background-color: #ce4125 !important;
 }/*# sourceMappingURL=application.css.map */

@@ -117,6 +117,7 @@
     .banner-img-#{$i} {
         background: url('#{$src}')  no-repeat;
         background-size: cover;
+        background-position: right center;
     }
 }
 
@@ -130,5 +131,9 @@
 
     .news-btn-#{$i} {
         background-color: $color;
+    }
+
+    .tag-#{$i} {
+        background-color: $color !important;
     }
 }

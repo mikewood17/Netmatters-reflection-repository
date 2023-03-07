@@ -17,15 +17,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
 }
+
 .search {
     display: flex;
 }
 
 .search-form{
-    margin-top: 11px;
     position: relative;
 }
 .secondary-nav{
@@ -57,7 +55,7 @@
 }
 
 .top-nav{
-    width: 200px;
+    width: 134px;
     font-size: 1.125rem;
 }
 .top-nav small {
@@ -73,7 +71,7 @@
     background-color: #333645;
     position: absolute;
     // transform: translate(0, 15px);
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 50px;
 
     visibility: hidden;
@@ -86,10 +84,57 @@
     .triangle {
         visibility: visible;
 
-        width: 200px;
+        width: 134px;
         height: 35px;
         transform: translate(-14px, 0px);
         clip-path: polygon(0 0,50% 100%,100% 0%);
+    }
+}
+
+.sub-title{
+    font-size: 2rem !important;
+    width: 100% !important;
+    color: #fff!important;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.sub-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -15px;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+.sub-content li {
+    display: flex;
+    align-items: center;
+    width: 33%;
+    font-weight: 300;
+}
+.sub-content i {
+    margin-right: 10px;
+}
+
+.sub-content a {
+    font-size: 1.2rem !important;
+    padding: 0.625rem 0.938rem 0.625rem 0 !important;
+    text-align: left !important;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+@media (min-width: 1260px){
+    .top-nav{
+        width: 167px;
+    }
+    .triangle{
+        width: 167px !important;
     }
 }
 
@@ -117,14 +162,14 @@
     z-index: 2;
 }
 .banner-item {
-    height: 700px;
+    height: 550px;
     position: relative;
     width: 100%;
 }
 
 .banner-carousel {
     color: #fff;
-    min-height: 740px !important;
+    min-height: 550px !important;
     min-width: 100vw !important;
     // margin-top: 220px;
     position: relative;
@@ -136,13 +181,14 @@
 .banner-content{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
-    margin-left: 50px;
     position: absolute;
     color: #fff;
-    top: 175px;
+    top: 20%;
     z-index: 4;
+    text-align: center;
+    width: 100%;
 }
 
 .banner-content h1{
@@ -163,14 +209,13 @@
 .banner-content a{
     padding: 5px 20px;
     font-size: 1.25rem;
-    font-size: 1.625rem;
     line-height: 2.5rem;
     margin-top: 1.938rem;
     margin-bottom: 1.125rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: auto;
 }
 
 .banner-content i {
@@ -185,9 +230,6 @@
 }
 
 @media (min-width: 992px) {
-    .banner-content{
-        margin-left: 150px;
-    }
     .banner-content h1 {
         font-size: 4rem;
         line-height: 5rem;
@@ -200,13 +242,15 @@
 }
 // Primary content container
 
-.our-services-container{
-    // margin-top: 300px; was using with sticky header but cant get it to function with slide nav
-    margin-bottom: 50px;
-}
 
 .row {
     margin-bottom: 50px;
+}
+
+.view-services{
+    font-size: 25px;
+    text-align: center;
+    margin: 15px 0 15px 0;
 }
 
 // Carousel images
@@ -214,7 +258,7 @@
 
 .carousel, .client-list{
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     display: flex;
     flex-direction: row;
@@ -226,7 +270,7 @@
 #owl-two div {
     max-height: 120px !important;
     max-width: auto !important;
-    margin-right: 50px !important;
+    margin-right: 40px !important;
 }
 // .owl-item{
 //     max-height: 120px !important;
@@ -300,6 +344,12 @@
     align-items: flex-start;
 }
 
+@media (min-width: 592px) and (max-width: 992px){
+    .review-btn-container{
+        flex-direction: row;
+    }
+}
+
 
 // News section container
 
@@ -332,10 +382,18 @@
 .offices,
 .services{
     display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
 }
+
+@media(min-width: 768px) {
+    .offices,
+    .services{
+        flex-direction: row;
+    }
+}
+
 .footer-license{
     display: flex;
 }
@@ -354,24 +412,34 @@
 }
 .social-media{
     display: flex;
+
+    a{
+        border-radius: 50%;
+        width: 38px;
+    }
 }
 
 
 // side menu
 
 .side-menu{
-    display: none;
+    display: hidden;
 
     position: fixed;
     top: 0;
-    right: 0;
+    right: -350px;
 
     background-color: #333645;
-    min-width: 275px;
+    width: 275px;
     height: 100vh;
     overflow-x: hidden;
     z-index: 101;
-    transition: 0.4s;
+    transition: right 0.4s;
+}
+
+.side-menu_open{
+    display: block;
+    right: 0px;
 }
 
 
@@ -469,21 +537,18 @@
 
     background-color: #333645;
     border-top: 0.5px solid rgba(255,255,255,0.05);
-    box-shadow: inset 0px -1px 1px #000;
 }
 
 .side-nav__item{
-    border-top: 1px solid hsla(0,0%,100%,.05);
-    box-shadow: inset 0px -1px 1px #000;
+    border-top: 1px solid rgba(0,0,0,.45);
     color: #fff;
-    padding: 1.25em 0 1.25em 1.25em;
     background-color: #282b36;
     font-size: .90625em;
     a {
         color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        display: block;
+        border-top: 1px solid hsla(0,0%,100%,.05);
+        padding: 15px 20px;
     }
     i {
         font-size: .60625em;
@@ -523,7 +588,7 @@
     width: auto;
     position: relative;
     transform: transalte(-50%,-50%);
-    top: 30%;
+    top: 10%;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
     background-clip: padding-box;
@@ -543,6 +608,7 @@
 
 .cookie-header{
     padding: 15px 20px;
+    width: inherit;
 }
 .cookie-popup h2 {
     margin: 0;
@@ -555,13 +621,14 @@
 .cookie-content {
     border-top: 1px solid #e5e5e5;
     padding: 20px;
+    width: inherit;
 }
 .cookie-popup p {
     font-size: 1rem;
     letter-spacing: .4px;
     color: #666;
-    text-align: justify;
-    margin: 20px 0;
+    margin: 0;
+    margin-bottom: 25px;
 }
 
 
@@ -573,15 +640,21 @@
     padding: 19px 20px 20px;
     text-align: right;
     border-top: 1px solid #e5e5e5;
-    height: 90px;
+    height: auto;
+    width: inherit;
 }
 
 .cookie-buttons{
     text-decoration: none;
-    display: block;
     position: relative;
     margin: auto;
     text-align: center;
+    width: auto;
+    height: 50px;
+    font-size: 1.063em !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 }
 .cookie-button{
     background-color: #926fb1;
@@ -600,4 +673,15 @@
 .spacer{
     padding-left: 15px;
     padding-right: 15px;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .top-spacer{
+        margin-bottom: 30px;
+    }
+
+    .spacer{
+        width: 100%;
+    }
 }
