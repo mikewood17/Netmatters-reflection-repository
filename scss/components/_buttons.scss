@@ -183,6 +183,9 @@
 
 .checked{
     background-color: #333645 !important;
+    i {
+        color:#fff;
+    }
     
 }
 
@@ -214,4 +217,10 @@
 .t-reviews {
     background-color: rgb(0, 182, 123);
     margin-bottom: 20px;
+}
+
+.enquire-btn{
+    background-color: #926fb1;
+    border-color: #926fb1;
+    text-transform: uppercase;
 }

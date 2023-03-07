@@ -1,0 +1,145 @@
+// Contact page styles
+
+//Breadcrumb section
+
+.breadcrumb-container{
+    box-shadow: 0 5px 35px rgb(0 0 0 / 10%);
+    padding: 14px 0 13px;
+}
+
+.breadcrumb{
+    background: none;
+    color: #333645;
+    font-size: .8125rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    a{
+        color: #333645;
+    font-weight: 700;
+    }
+}
+
+.slash{
+    padding: 0 5px;
+    color: #333645;
+}
+
+//Address Content
+
+.office-addresses{
+    margin-bottom: 40px;
+}
+
+.address-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seperator{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50%;
+}
+
+.address-item{
+    margin-top: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
+    border: 1px solid #ccc;
+}
+
+.address-img img{
+    max-width: 100%;
+}
+
+.address-content{
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-weight: 400;
+    }
+}
+
+.address-content a {
+    margin-top: 15px !important;
+    background-color: #926fb1;
+    width: fit-content;
+}
+
+.tel a {
+    background-color: transparent !important;
+    color:#926fb1;
+    font-weight: 700;
+    font-size: 1.625rem;
+}
+
+//contact Content
+
+.bottom-section{
+    padding-bottom: 50px;
+}
+
+.ooh a{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    p{
+        margin-right: 10px;
+    }
+    &:hover p{
+        text-decoration: underline;
+    }
+}
+
+.form-container{
+    background-color: #e6e7e9;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.form-input_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+
+    textarea{
+        height:100px;
+        min-height: 100px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.input{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.input-md{
+    width: 50%;
+}
+
+.input-lrg{
+    width: 100%;
+}
+
+.action-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
