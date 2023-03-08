@@ -93,11 +93,18 @@
     flex-wrap: nowrap;
 
     p{
-        margin-right: 10px;
+        margin-right: 7px;
     }
     &:hover p{
         text-decoration: underline;
     }
+}
+
+.sales-email a {
+    color:#926fb1;
+    font-size: 1.625rem;
+    font-weight: 600;
+
 }
 
 .form-container{
@@ -122,6 +129,11 @@
         min-height: 100px;
         max-width: 100%;
         margin-bottom: 20px;
+    }
+
+    label{
+        font-weight: 600;
+        color: #333645;
     }
 }
 

@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<!-- head -->
+
+<?php
+
+include("includes/db-connect.php");
+
+$conn = OpenCon();
+
+?>
+
 <!--/.header-->
 <?php include("includes/header.php"); ?>
 
@@ -137,7 +147,7 @@
                 </strong>
                 <br>
             </p>
-            <p>
+            <p class="sales-email">
                 <a href="#">sales@netmatters.com</a>
             </p>
             <p>
