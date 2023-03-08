@@ -1,17 +1,6 @@
 <?php
 
-// function OpenCon(){
-//     $dbHost = "localhost";
-//     $dbUsername = "michaelw_michaelwood";
-//     $dbPassword = "MeggyCat!123";
-//     $dbName = "michaelw_NM-enquiry";
-
-// $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName) or die("Connection Failed");
-
-// return $db;
-// echo "connection successful";
-// }
-
+// connect to database
 try {
     $servername = "localhost:3306";
     $username = "michaelw_michaelwood";
@@ -25,10 +14,10 @@ try {
     die();
 }
 
-
-
+// check if button pressed
 if(ISSET($_POST["submit"])) {
 
+    // variables
     $name = $_POST['name']; 
     $companyName = $_POST['company'];
     $email = $_POST['email'];
@@ -36,14 +25,30 @@ if(ISSET($_POST["submit"])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    try {
-        $sql = "INSERT INTO `michaelw_NM-enquiry` (name, company , Email, Telephone, subject, message) VALUES ('". $name ."', '". $companyName ."', '". $email ."', '". $telephone ."', '". $subject ."', '". $message ."')";
-        $conn->exec($sql);
-    }catch(PDOException $e) {
-        echo $e->getMessage();
-    }
+    // check if inputs are empty
+    if(empty($name) || empty($email) || empty($telephone) || empty($subject) ||empty($message)){
 
-    $conn = null;
+
+     } // check if input characters are valid
+    elseif(!preg_match("/^[a-zA-Z]*$/", $name)){
+
+    } //check if email is valid
+    elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+  
+    } //check if telephone is valid
+    elseif(!preg_match("/^[0-9]*$/", $telephone)) {
+        
+    } else {
+
+        try {
+            $sql = "INSERT INTO `enquiry` (Name, Company_Name, Email, Telephone, Subject, Message) VALUES ('". $name ."', '". $companyName ."', '". $email ."', '". $telephone ."', '". $subject ."', '". $message ."')";
+            $conn->exec($sql);
+        }catch(PDOException $e) {
+            echo $e->getMessage();
+        }
+
+        $conn = null;
+    }
 }
 
 ?>

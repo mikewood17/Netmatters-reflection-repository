@@ -168,7 +168,7 @@ include("includes/db-connect.php");
                 </a>
         </div>
         <div class="form-container">
-            <form class="enquiry-form" method="POST" action="">
+            <form class="enquiry-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <div class="form-input_wrapper">
                     <div class="input input-md">
                         <div class="form-group">
