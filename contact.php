@@ -5,7 +5,7 @@
 
 include("includes/db-connect.php");
 
-$conn = OpenCon();
+//$conn = OpenCon();
 
 ?>
 
@@ -168,7 +168,7 @@ $conn = OpenCon();
                 </a>
         </div>
         <div class="form-container">
-            <form class="enquiry-form" method="POST">
+            <form class="enquiry-form" method="POST" action="">
                 <div class="form-input_wrapper">
                     <div class="input input-md">
                         <div class="form-group">
@@ -217,7 +217,7 @@ $conn = OpenCon();
                     </div>
                 </div>
                 <div class="action-container">
-                    <button name="submit" class="enquire-btn button">Send Enquiry</button>
+                    <button type="submit" value="Submit" name="submit" class="enquire-btn button">Send Enquiry</button>
                     <small>
                         <span class="error">*</span>Fields Required
                     </small>
