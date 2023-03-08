@@ -19,12 +19,15 @@ try {
 
     $conn = new PDO("mysql:host=$servername; dbname=michaelw_NM-enquiry", $username, $password);
     $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(Exception $e) {
+    echo "connected successfully";
+} catch(PDOException $e) {
     echo "error!: " . $e -> getMessage();
     die();
 }
 
-if(!empty($_POST["submit"])) {
+
+
+if(ISSET($_POST["submit"])) {
 
     $name = $_POST['name']; 
     $companyName = $_POST['company'];
@@ -33,8 +36,14 @@ if(!empty($_POST["submit"])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $insertQuery = "insert into michaelw_NM-enquiry (Name, Company Name, Email, Telephone, Subject, Message) values('". $name ."', '". $companyName ."', '". $email ."', '". $telephone ."', '". $subject ."', '". $message ."')";
+    try {
+        $sql = "INSERT INTO `michaelw_NM-enquiry` (name, company , Email, Telephone, subject, message) VALUES ('". $name ."', '". $companyName ."', '". $email ."', '". $telephone ."', '". $subject ."', '". $message ."')";
+        $conn->exec($sql);
+    }catch(PDOException $e) {
+        echo $e->getMessage();
+    }
 
+    $conn = null;
 }
 
 ?>
