@@ -80,6 +80,10 @@
     font-size: 1.625rem;
 }
 
+.map{
+    height: 250px;
+}
+
 //contact Content
 
 .bottom-section{
@@ -106,6 +110,50 @@
     font-weight: 600;
 
 }
+.alert-container{
+    display: block;
+}
+
+button.close{
+    right: 10px;
+    top: -57px;
+    float: right;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+
+    z-index: 2;
+}
+
+.alert{
+    display: block;
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid;
+
+    z-index: 1;
+}
+.error-alert{
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+.success-alert{
+    background-color: #2ecc71;
+    border-color: #d6e9c6;;
+    color: #fff;
+}
 
 .form-container{
     background-color: #e6e7e9;
@@ -125,6 +173,7 @@
     flex-direction: column;
 
     textarea{
+        font-family: 'Poppins', sans-serif;;
         height:100px;
         min-height: 100px;
         max-width: 100%;

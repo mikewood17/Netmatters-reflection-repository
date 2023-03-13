@@ -271,6 +271,12 @@
             </div>
 
 <!--/News Section-->
+
+<?php
+
+    include("includes/news.php");
+    include("includes/functions.php");
+?>
                 <div>
                     <div class="latest-news">
                         <div class="bar">
@@ -294,25 +300,25 @@
                                                     <a class="news-link" href="#">
                                                         <div class="img standard">
                                                                 <span class="cat-tag tag-1">NEWS</span>
-                                                                <img class="news-img" src="img/news-img-1.webp" alt="6 steps you can do to make your website more visible on Google">
+                                                                <img class="news-img" src="<?php echo $row1['header-img']; ?>" alt="<?php echo $row1['header-title']; ?>">
                                                         </div>
                                                         <div class="block">
                                                             <h3 class="news-title-1">
-                                                                <a href="#">6 Steps you can do to make your website more...</a>
+                                                                <a href="#"><?php echo $row1['header-title']; ?></a>
                                                             </h3>
                                                             <p>
-                                                                Making your website more visible on Google is one of the most important factors in getting leads through...
+                                                               <?php echo $row1['description']; ?>
                                                             </p>
                                                             <a class="button news-btn-1" href="#">
                                                                 READ MORE 
                                                             </a>
                                                             <div class="user">
                                                                 <div class="avatar">
-                                                                    <img src="img/netmatters-logo.webp"  alt="netmatters logo">
+                                                                    <img src="<?php echo $row1['author-img']; ?>"  alt="<?php echo $row1['author']; ?>">
                                                                 </div>
                                                                 <div class="details">
-                                                                    <strong>Posted by Netmatters</strong>
-                                                                    25th October 2022
+                                                                    <strong>Posted by:  <?php echo $row1['author']; ?></strong>
+                                                                    <?php echo $row1['date']; ?>
                                                                 </div>
                                                             </div> 
                                                         </div>
@@ -324,25 +330,25 @@
                                                     <a class="news-link" href="#">
                                                         <div class="img standard">
                                                                 <span class="cat-tag tag-2">NEWS</span>
-                                                                <img class="news-img" src="img/news-img-2.webp" alt="Business Automation: Take your Business to the next level">
+                                                                <img class="news-img" src="<?php echo $row2['header-img']; ?>" alt="<?php echo $row2['header-title']; ?>">
                                                         </div>
                                                         <div class="block">
                                                             <h3 class="news-title-2">
-                                                                <a href="#">Business Automation: Take your Business to the...</a>
+                                                                <a href="#"><?php echo $row2['header-title']; ?></a>
                                                             </h3>
                                                             <p>
-                                                                In this article we explain everything you need to know about business automation, and why your busin...
+                                                                <?php echo $row2['description']; ?>  
                                                             </p>
                                                             <a class="button news-btn-2" href="#">
                                                                 READ MORE 
                                                             </a>
                                                         <div class="user">
                                                             <div class="avatar">
-                                                                <img src="img/netmatters-logo.webp" alt="netmatters logo">
+                                                                <img src="<?php echo $row2['author-img']; ?>" alt="<?php echo $row2['author']; ?>">
                                                             </div>
                                                             <div class="details">
-                                                                <strong>Posted by Netmatters</strong>
-                                                                25th October 2022
+                                                                <strong>Posted by: <?php echo $row2['author']; ?></strong>
+                                                                <?php echo $row2['date']; ?>
                                                             </div>
                                                         </div> 
                                                         </div>
@@ -354,25 +360,25 @@
                                                     <a class="news-link" href="#">
                                                         <div class="img standard">
                                                                 <span class="cat-tag tag-3">NEWS</span>
-                                                                <img class="news-img" src="img/news-img-3.webp" alt="Improving Efficiency With a Bespoke Software">
+                                                                <img class="news-img" src="<?php echo $row3['header-img']; ?>" alt="<?php echo $row3['header-title']; ?>">
                                                         </div>
                                                         <div class="block">
                                                             <h3 class="news-title-3">
-                                                                <a href="#">Improving Efficiency With a Bespoke Software...</a>
+                                                                <a href="#"><?php echo $row3['header-title']; ?></a>
                                                             </h3>
                                                             <p>
-                                                                At Netmatters we have a proven track record of building software solutions that improves the efficie...
+                                                                <?php echo $row3['description']; ?>
                                                             </p>
                                                             <a class="button news-btn-3" href="#">
                                                                 READ MORE 
                                                             </a>
                                                         <div class="user">
                                                             <div class="avatar">
-                                                                <img src="img/netmatters-logo.webp"  alt="netmatters logo">
+                                                                <img src="<?php echo $row3['author-img']; ?>"  alt="<?php echo $row3['author']; ?>">
                                                             </div>
                                                             <div class="details">
-                                                                <strong>Posted by Netmatters</strong>
-                                                                25th October 2022
+                                                                <strong>Posted by: <?php echo $row3['author']; ?></strong>
+                                                                <?php echo $row3['date']; ?>
                                                             </div>
                                                         </div> 
                                                         </div>

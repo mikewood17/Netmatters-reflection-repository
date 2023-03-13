@@ -53,7 +53,7 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map">
+                        <div class="map" id="london-map">
 
                         </div>
                     </div>
@@ -79,7 +79,7 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map">
+                        <div class="map" id="cambridge-map">
 
                         </div>
                     </div>
@@ -105,7 +105,7 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map">
+                        <div class="map" id="wymondham-map">
 
                         </div>
                     </div>
@@ -131,7 +131,7 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map">
+                        <div class="map" id="yarmouth-map">
 
                         </div>
                     </div>
@@ -139,7 +139,7 @@ include("includes/db-connect.php");
             </div>
         </div>
     </div>
-    <div class="bottom-section container">
+    <div class="bottom-section container" id="enquiryForm">
         <div class="contact-container">
             <p>
                 <strong>
@@ -168,6 +168,50 @@ include("includes/db-connect.php");
                 </a>
         </div>
         <div class="form-container">
+            <div class="alert-container">
+            <?php
+
+                if(!isset($_GET['signup'])){
+                    
+                } else {
+                    $signupCheck = $_GET['signup'];
+
+                    if($signupCheck == "empty") {
+                        echo 
+                        "<span class='alert error-alert'> Please fill in all required fields</span>
+                        <button type='button' class='close' data-dismiss='alert'>x</button>";
+                        
+                    }
+                    elseif($signupCheck == "char"){
+                        echo
+                         "<span class='alert error-alert'> Please enter a valid name</span>
+                         <button type='button' class='close' data-dismiss='alert'>x</button>";
+                        
+                    }
+                    elseif($signupCheck == "email"){
+                        echo
+                        "<span class='alert error-alert'> Please enter a valid email</span>
+                        <button type='button' class='close' data-dismiss='alert'>x</button>";
+                      
+                    }
+                    elseif($signupCheck == "telephone"){
+                        echo 
+                        "<span class='alert error-alert'> Please enter a valid telephone number</span>
+                        <button type='button' class='close' data-dismiss='alert'>x</button>";
+                        
+                    }
+                    elseif($signupCheck == "success"){
+                        echo
+                        "<span class='alert success-alert'>Your message has been sent!</span>
+                        <button type='button' class='close' data-dismiss='alert'>x</button>";
+                        
+                        
+                    
+                    }
+                };
+
+            ?>
+            </div>
             <form class="enquiry-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <div class="form-input_wrapper">
                     <div class="input input-md">
@@ -191,7 +235,7 @@ include("includes/db-connect.php");
                     <div class="input input-md">
                         <div class="form-group">
                             <label for="telephone" class="required">Your Telephone Number</label>
-                            <input class="form-control" name="telephone" type="text" id="telephone">
+                            <input class="form-control" name="telephone" type="text" id="telephone" minlength="11">
                         </div>
                     </div>
                     <div class="input input-lrg">
@@ -203,7 +247,7 @@ include("includes/db-connect.php");
                     <div class="input input-lrg">
                         <div class="form-group">
                             <label for="message" class="required">Message</label>
-                            <textarea class="form-control" name="message" type="text" id="message"></textarea>
+                            <textarea class="form-control" name="message" type="text" id="message" minlength="20"></textarea>
                         </div>
                     </div>
                 </div>

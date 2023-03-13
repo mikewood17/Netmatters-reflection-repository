@@ -95,7 +95,7 @@ a {
   padding: 30px;
   border-radius: 15px;
   margin: 1.5em 0.8em 0.8em;
-  border: 1px solid #999aa2;
+  border: 1px solid #ccc;
   text-align: center;
   position: relative;
   top: 0;
@@ -604,7 +604,7 @@ a {
   width: 275px;
   height: 100vh;
   overflow-x: hidden;
-  z-index: 101;
+  z-index: 1003;
   transition: right 0.4s;
 }
 
@@ -725,7 +725,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1002;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   -webkit-overflow-scrolling: touch;
@@ -915,7 +915,7 @@ a {
   position: relative;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1001;
   transition: all 300ms ease-in-out;
 }
 
@@ -1058,6 +1058,10 @@ a {
   font-size: 1.625rem;
 }
 
+.map {
+  height: 250px;
+}
+
 .bottom-section {
   padding-bottom: 50px;
 }
@@ -1081,6 +1085,49 @@ a {
   font-weight: 600;
 }
 
+.alert-container {
+  display: block;
+}
+
+button.close {
+  right: 10px;
+  top: -57px;
+  float: right;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.alert {
+  display: block;
+  height: 50px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  z-index: 1;
+}
+
+.error-alert {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.success-alert {
+  background-color: #2ecc71;
+  border-color: #d6e9c6;
+  color: #fff;
+}
+
 .form-container {
   background-color: #e6e7e9;
   border-radius: 10px;
@@ -1099,6 +1146,7 @@ a {
   flex-direction: column;
 }
 .form-group textarea {
+  font-family: "Poppins", sans-serif;
   height: 100px;
   min-height: 100px;
   max-width: 100%;

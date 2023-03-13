@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/fc803fbe6f.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="js/owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="js/owl/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link rel="stylesheet" href="scss/application.css">
     <link href="css/hamburgers.css" rel="stylesheet">
 	<link rel="stylesheet" href="scss/flexbox.css">
