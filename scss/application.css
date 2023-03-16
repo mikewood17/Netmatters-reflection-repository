@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -1151,37 +1155,25 @@ button.close {
 }
 
 .alert-error {
-  display: none;
   background-color: #f2dede;
-  border: 1px solid #ebccd1;
+  border-color: #ebccd1 !important;
   color: #a94442;
 }
 
 .alert-success {
-  display: none;
-  background-color: #2ecc71;
-  border: 1px solid #d6e9c6;
+  background-color: #98e674;
+  border-color: #87c388 !important;
   color: #fff;
 }
 
 .alert {
-  height: 50px;
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 1rem;
   z-index: 1;
-}
-
-.error-alert {
-  background-color: #f2dede;
-  border-color: #ebccd1;
-  color: #a94442;
-}
-
-.success-alert {
-  background-color: #2ecc71;
-  border-color: #d6e9c6;
-  color: #fff;
 }
 
 .form-container {

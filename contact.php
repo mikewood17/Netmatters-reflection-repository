@@ -174,62 +174,61 @@ include("includes/db-connect.php");
             <div class="form-container">
                 <div class="alert-container">
                 <?php
-
-                    if ($error != null){
-                        ?> <style>.alert-error{display:block}</style> <?php
-                    }
-
-                    if ($success != null) {
-                        ?>  <style>.alert-success{display:block}</style> <?php
+                    if (!empty($alerts)){
+                        foreach($alerts as $errors) {
+                            echo 
+                            "<div class='alert alert-error'>
+                                <span class='error-alert'>$errors</span>
+                                <button  type='button' class='close' data-dismiss='alert'>x</button>
+                            </div>";
+                        }
+                    } else {
+                        echo 
+                        "<div class='alert alert-success'>
+                            <span class='success-alert'>Your message has been sent!</span>
+                            <button type='button' class='close' data-dismiss='alert'>x</button>
+                        </div>";
                     }
 
                 ?>
-                <div class='alert alert-error'>
-                    <span class='error-alert'><?php echo $error; ?></span>
-                    <button onclick='closeErrorAlert()' type='button' class='close' data-dismiss='alert'>x</button>
+                 
                 </div>
-                <div class='alert alert-success'>
-                    <span class='success-alert'><?php echo $success; ?></span>
-                    <button onclick='closeSuccessAlert()' type='button' class='close' data-dismiss='alert'>x</button>
-                </div>
-                     
-                </div>
-                <form class="enquiry-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                <form class="enquiry-form" method="POST" action="contact.php#enquiryForm">
                     <div class="form-input_wrapper">
                         <div class="input input-md">
                             <div class="form-group">
                                 <label for="name" class="required">Your Name</label>
-                                <input class="form-control" name="name" type="text" id="name">
+                                <input class="form-control" name="name" type="text" id="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : '' ?>" />
                             </div>
                         </div>
                         <div class="input input-md">
                             <div class="form-group">
                                 <label for="company">Company Name</label>
-                                <input class="form-control" name="company" type="text" id="company">
+                                <input class="form-control" name="company" type="text" id="company" value="<?php echo isset($_POST['company']) ? $_POST['company'] : '' ?>" />
                             </div>
                         </div>
                         <div class="input input-md">
                             <div class="form-group">
                                 <label for="email" class="required">Your Email</label>
-                                <input class="form-control" name="email" type="email" id="email">
+                                <input class="form-control" name="email" type="email" id="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : '' ?>" />
                             </div>
                         </div>
                         <div class="input input-md">
                             <div class="form-group">
                                 <label for="telephone" class="required">Your Telephone Number</label>
-                                <input class="form-control" name="telephone" type="text" id="telephone" minlength="11">
+                                <input class="form-control" name="telephone" type="text" id="telephone" minlength="11" value="<?php echo isset($_POST['telephone']) ? $_POST['telephone'] : '' ?>" />
                             </div>
                         </div>
                         <div class="input input-lrg">
                             <div class="form-group">
                                 <label for="subject" class="required">Subject</label>
-                                <input class="form-control" name="subject" type="text" id="subject">
+                                <input class="form-control" name="subject" type="text" id="subject" value="<?php echo isset($_POST['subject']) ? $_POST['subject'] : '' ?>" />
                             </div>
                         </div>
                         <div class="input input-lrg">
                             <div class="form-group">
-                                <label for="message" class="required">Message</label>
-                                <textarea class="form-control" name="message" type="text" id="message" minlength="20"></textarea>
+                                <label for="message" class="required" >Message</label>
+                                <textarea class="form-control" name="message" type="text" id="message"  minlength="20" value="<?php echo isset($_POST['message']) ? $_POST['message'] : '' ?>" /></textarea>
                             </div>
                         </div>
                     </div>
@@ -243,7 +242,7 @@ include("includes/db-connect.php");
                         </div>
                     </div>
                     <div class="action-container">
-                        <button type="submit" value="Submit" name="submit" class="enquire-btn button">Send Enquiry</button>
+                        <button type="submit" value="Submit" name="submit" class="enquire-btn button" >Send Enquiry</button>
                         <small>
                             <span class="error">*</span>Fields Required
                         </small>

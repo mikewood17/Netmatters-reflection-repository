@@ -45,20 +45,30 @@ if(ISSET($_POST["submit"])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    // check if inputs are empty
+    // error count
+    $alerts = [];
+
+    // check if all inputs are empty
     if(empty(trim($name)) || empty(trim($email)) || empty(trim($telephone)) || empty(trim($subject)) ||empty(trim($message))){
-        $error = "Please fill in all required fields";
-        header('location: contact.php?#enquiryForm');
-     } // check if input characters are valid
-    elseif(!preg_match("/^[a-zA-Z- ]*$/", $name)){
-        $error = "Please enter a valid name";
-    } //check if email is valid
-    elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $error = "Please enter a valid email";
-    } //check if telephone is valid
-    elseif(!preg_match("/^[0-9]*$/", $telephone)) {
-        $error = "Please enter a valid telephone";
-    } else {
+        array_push($alerts, 'Please fill in all required fields');
+    } 
+
+    // check if input characters are valid
+    if(!preg_match("/^[a-zA-Z- ]*$/", $name) || empty(trim($name))) {
+        array_push($alerts, 'Please enter a valid name');
+    }
+
+    //check if email is valid
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL) || empty(trim($email))){
+        array_push($alerts, 'Please enter a valid email');
+    }
+
+    //check if telephone is valid
+    if(!preg_match("/^[0-9]*$/", $telephone) || empty(trim($telephone))){
+        array_push($alerts, 'Please enter a valid telephone');
+    }
+
+    if (empty($alerts)){
 
         try {
             $sql = "INSERT INTO `enquiry` (Name, Company_Name, Email, Telephone, Subject, Message) VALUES ('". $name ."', '". $companyName ."', '". $email ."', '". $telephone ."', '". $subject ."', '". $message ."')";
@@ -66,10 +76,9 @@ if(ISSET($_POST["submit"])) {
         }catch(PDOException $e) {
             echo $e->getMessage();
         }
-
-        $success = "Your message has been sent!";
         $conn = null;
     }
+    
 }
 
 ?>
