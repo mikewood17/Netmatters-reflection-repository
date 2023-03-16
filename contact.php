@@ -175,46 +175,24 @@ include("includes/db-connect.php");
                 <div class="alert-container">
                 <?php
 
-                    if(!isset($_GET['signup'])){
-                        
-                    } else {
-                        $signupCheck = $_GET['signup'];
-                        
+                    if ($error != null){
+                        ?> <style>.alert-error{display:block}</style> <?php
+                    }
 
-                        if($signupCheck == "empty") {
-                            echo 
-                            "<span class='alert error-alert'> Please fill in all required fields</span>
-                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
-                        }
-                        elseif($signupCheck == "char"){
-                            echo
-                            "<span class='alert error-alert'> Please enter a valid name</span>
-                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
-                            
-                        }
-                        elseif($signupCheck == "email"){
-                            echo
-                            "<span class='alert error-alert'> Please enter a valid email</span>
-                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
-                        
-                        }
-                        elseif($signupCheck == "telephone"){
-                            echo 
-                            "<span class='alert error-alert'> Please enter a valid telephone number</span>
-                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
-                            
-                        }
-                        elseif($signupCheck == "success"){
-                            echo
-                            "<span class='alert success-alert'>Your message has been sent!</span>
-                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
-                            
-                            
-                        
-                        }
-                    };
+                    if ($success != null) {
+                        ?>  <style>.alert-success{display:block}</style> <?php
+                    }
 
                 ?>
+                <div class='alert alert-error'>
+                    <span class='error-alert'><?php echo $error; ?></span>
+                    <button onclick='closeErrorAlert()' type='button' class='close' data-dismiss='alert'>x</button>
+                </div>
+                <div class='alert alert-success'>
+                    <span class='success-alert'><?php echo $success; ?></span>
+                    <button onclick='closeSuccessAlert()' type='button' class='close' data-dismiss='alert'>x</button>
+                </div>
+                     
                 </div>
                 <form class="enquiry-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                     <div class="form-input_wrapper">

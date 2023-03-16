@@ -2,31 +2,37 @@
 
 //connect to local databse
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
+$servername = "localhost";
+$username = "root";
+$password = "";
 
-// try {
-//     $conn = new PDO("mysql:host=$servername;dbname=nm-enquiry", $username, $password);
-//     // set the PDO error mode to exception
-//     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//     //echo "Connected successfully";
-//   } catch(PDOException $e) {
-//     echo "Connection failed: " . $e->getMessage();
-//   }
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=nm-enquiry", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+  } catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+  }
 
 // connect to database
-try {
-    $servername = "localhost:3306";
-    $username = "michaelw_michaelwood";
-    $password = "MeggyCat!123";
+// try {
+//     $servername = "localhost:3306";
+//     $username = "michaelw_michaelwood";
+//     $password = "MeggyCat!123";
 
-    $conn = new PDO("mysql:host=$servername; dbname=michaelw_NM-enquiry", $username, $password);
-    $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo "error!: " . $e -> getMessage();
-    die();
-}
+//     $conn = new PDO("mysql:host=$servername; dbname=michaelw_NM-enquiry", $username, $password);
+//     $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// } catch(PDOException $e) {
+//     echo "error!: " . $e -> getMessage();
+//     die();
+// }
+
+// Variables
+
+$error = null;
+$success = null;
 
 // check if button pressed
 if(ISSET($_POST["submit"])) {
@@ -40,21 +46,17 @@ if(ISSET($_POST["submit"])) {
     $message = $_POST['message'];
 
     // check if inputs are empty
-    if(empty($name) || empty($email) || empty($telephone) || empty($subject) ||empty($message)){
-        header("Location: contact.php?signup=empty#enquiryForm");
-        exit();
+    if(empty(trim($name)) || empty(trim($email)) || empty(trim($telephone)) || empty(trim($subject)) ||empty(trim($message))){
+        $error = "Please fill in all required fields";
      } // check if input characters are valid
     elseif(!preg_match("/^[a-zA-Z- ]*$/", $name)){
-        header("Location: contact.php?signup=char#enquiryForm");
-        exit();
+        $error = "Please enter a valid name";
     } //check if email is valid
     elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        header("Location: contact.php?signup=email#enquiryForm");
-        exit();
+        $error = "Please enter a valid email";
     } //check if telephone is valid
     elseif(!preg_match("/^[0-9]*$/", $telephone)) {
-        header("Location: contact.php?signup=phone#enquiryForm");
-        exit();
+        $error = "Please enter a valid telephone";
     } else {
 
         try {
@@ -64,8 +66,7 @@ if(ISSET($_POST["submit"])) {
             echo $e->getMessage();
         }
 
-        header("Location: contact.php?signup=success#enquiryForm");
-        exit();
+        $success = "Your message has been sent!";
         $conn = null;
     }
 }
