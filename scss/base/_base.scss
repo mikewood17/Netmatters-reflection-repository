@@ -13,7 +13,7 @@ body {
 	  line-height: 1.6;
 	  color: #3a3a3a;
     margin: 0;
-    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .no-scroll {
@@ -24,7 +24,7 @@ body {
 
 .main{
   margin-right: 0;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 
 div {

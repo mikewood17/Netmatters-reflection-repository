@@ -8,114 +8,123 @@
         
             <div id="owl-one" class="banner-carousel owl-carousel owl-theme">
                 <div class="banner-item banner-img-1">
-                    <div class="banner-content">
-                        <h1>
-                            The East of Englands's Leading Technology Company
-                        </h1>
-                        <p>
-                            Performance-driven digital and technology services 
-                            <br>
-                            with complete transparency.
-                        </p>
-                        <a class="learn-1 button" href="#">
-                            WHY CHOOSE US? <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="banner-content-container">
+                        <div class="banner-content">
+                           <h1>
+                                The East of Englands's Leading Technology Company
+                            </h1>
+                            <p>
+                                Performance-driven digital and technology services 
+                                <br>
+                                with complete transparency.
+                            </p>
+                            <a class="learn-1 button" href="#">
+                                WHY CHOOSE US? <i class="fa-solid fa-arrow-right"></i>
+                            </a> 
+                        </div>
                     </div>
                 </div>
                 
                 <div class="banner-item banner-img-2">
-                    <div class="banner-content">
-                        <h1>
-                            Bespoke software
-                        </h1>
-                        <p>
-                            Delivering expert bespoke  software 
-                            <br>
-                            solutions across a range of industries.
-                        </p>
-                        <a class="learn-2 button" href="#">
-                            FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="banner-content-container">
+                        <div class="banner-content">
+                            <h1>
+                                Bespoke software
+                            </h1>
+                            <p>
+                                Delivering expert bespoke  software 
+                                <br>
+                                solutions across a range of industries.
+                            </p>
+                            <a class="learn-2 button" href="#">
+                                FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>    
                 <div class="banner-item banner-img-3">
-                    <div class="banner-img "></div>
-                    <div class="banner-content">
-                        <h1>
-                            IT Support
-                        </h1>
-                        <p>
-                            Fast and cost-effective IT support 
-                            <br>
-                            services for your business.
-                        </p>
-                        <a class="learn-3 button" href="#">
-                            FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="banner-content-container">
+                        <div class="banner-content">
+                            <h1>
+                                IT Support
+                            </h1>
+                            <p>
+                                Fast and cost-effective IT support 
+                                <br>
+                                services for your business.
+                            </p>
+                            <a class="learn-3 button" href="#">
+                                FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="banner-item  banner-img-4">
-                    <div class="banner-img"></div>
-                    <div class="banner-content">
-                        <h1>
-                            Digital Marketing
-                        </h1>
-                        <p>
-                            Generating your new business through
-                            <br>
-                            results-driven marketing activities.
-                        </p>
-                        <a class="learn-4 button" href="#">
-                            FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="banner-content-container">
+                        <div class="banner-content">
+                            <h1>
+                                Digital Marketing
+                            </h1>
+                            <p>
+                                Generating your new business through
+                                <br>
+                                results-driven marketing activities.
+                            </p>
+                            <a class="learn-4 button" href="#">
+                                FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="banner-item banner-img-5">
-                    <div class="banner-img "></div>
-                    <div class="banner-content">
-                        <h1>
-                            Telecoms Services
-                        </h1>
-                        <p>
-                            A new approach to connectivity, see 
-                            <br>
-                            how we can help your business.
-                        </p>
-                        <a class="learn-5 button" href="#">
-                            FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="banner-content-container">
+                        <div class="banner-content">
+                            <h1>
+                                Telecoms Services
+                            </h1>
+                            <p>
+                                A new approach to connectivity, see 
+                                <br>
+                                how we can help your business.
+                            </p>
+                            <a class="learn-5 button" href="#">
+                                FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="banner-item  banner-img-6">
-                    <div class="banner-img"></div>
-                    <div class="banner-content">
-                        <h1>
-                            Web Design
-                        </h1>
-                        <p>
-                            For businesses looking to make a strong
-                            <br>
-                            and effective first impression.
-                        </p>
-                        <a class="learn-6 button" href="#">
-                            FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="banner-content-container">
+                        <div class="banner-content">
+                            <h1>
+                                Web Design
+                            </h1>
+                            <p>
+                                For businesses looking to make a strong
+                                <br>
+                                and effective first impression.
+                            </p>
+                            <a class="learn-6 button" href="#">
+                                FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="banner-item banner-img-7">
-                    <div class="banner-img "></div>
-                    <div class="banner-content">
-                        <h1>
-                            Cyber Security
-                        </h1>
-                        <p>
-                            Keeping businesses and their customers 
-                            <br>
-                            sesnsitive information protected.
-                        </p>
-                        <a class="learn-7 button" href="#">
-                            FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="banner-content-container">
+                        <div class="banner-content">
+                            <h1>
+                                Cyber Security
+                            </h1>
+                            <p>
+                                Keeping businesses and their customers 
+                                <br>
+                                sesnsitive information protected.
+                            </p>
+                            <a class="learn-7 button" href="#">
+                                FIND OUT MORE <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
   color: #3a3a3a;
   margin: 0;
-  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .no-scroll {
@@ -25,7 +25,7 @@ body {
 
 .main {
   margin-right: 0;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 
 div {
@@ -371,17 +371,20 @@ a {
 .banner-carousel {
   color: #fff;
   min-height: 550px !important;
-  min-width: 100vw !important;
+  width: 100% !important;
   position: relative;
 }
 .banner-carousel a {
   color: #fff;
 }
 
-.banner-content {
+.banner-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.banner-content {
   flex-wrap: wrap;
   position: absolute;
   color: #fff;
@@ -412,9 +415,6 @@ a {
   line-height: 2.5rem;
   margin-top: 1.938rem;
   margin-bottom: 1.125rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: auto;
 }
 
@@ -987,6 +987,32 @@ a {
   padding: 14px 0 13px;
 }
 
+.section-top {
+  padding-top: 50px;
+}
+
+.section-top .container h1 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-container {
+    display: none;
+  }
+  .section-top {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .breadcrumb-container {
+    border-top: 1px solid #333645;
+  }
+  .section-top {
+    background-color: #333645;
+    color: #fff;
+    padding: 24px 0;
+  }
+}
 .breadcrumb {
   background: none;
   color: #333645;
@@ -1011,13 +1037,14 @@ a {
 
 .address-row {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 .seperator {
   padding-left: 15px;
   padding-right: 15px;
-  width: 50%;
+  width: 100%;
 }
 
 .address-item {
@@ -1060,12 +1087,31 @@ a {
 
 .map {
   height: 250px;
+  border-radius: 0 0 20px 20px;
 }
 
 .bottom-section {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 50px;
 }
 
+.bottom-spacer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 1260px) {
+  .bottom-section {
+    flex-direction: row-reverse;
+  }
+  .contact-container {
+    margin-left: 15px;
+  }
+  .form-container {
+    margin-right: 15px;
+  }
+}
 .ooh a {
   display: flex;
   align-items: center;
@@ -1091,7 +1137,7 @@ a {
 
 button.close {
   right: 10px;
-  top: -57px;
+  top: -37px;
   float: right;
   position: relative;
   background: transparent;
@@ -1111,7 +1157,6 @@ button.close {
   height: 50px;
   width: 100%;
   padding: 15px;
-  margin-bottom: 20px;
   border: 1px solid;
   z-index: 1;
 }
@@ -1132,6 +1177,8 @@ button.close {
   background-color: #e6e7e9;
   border-radius: 10px;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-input_wrapper {
@@ -1163,7 +1210,7 @@ button.close {
 }
 
 .input-md {
-  width: 50%;
+  width: 100%;
 }
 
 .input-lrg {

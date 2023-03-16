@@ -189,9 +189,27 @@
         text-align: left;
         margin-right: auto;
         margin-left: auto;
-        padding-left: 40px;
+        padding-left: 15px;
         padding-right: 15px;
+        width: 970px;
     }
+
+    .seperator{
+        width: 50%;
+    }
+
+    .address-row{
+        flex-direction: row !important;
+    }
+
+    .input-md{
+        width: 50%;
+    }
+
+    .section-top{
+        padding-top: 50px;
+    }
+
 
 }
 
@@ -206,6 +224,11 @@
     .container {
         max-width: 1200px;
     }
+
+    .banner-content{
+        width: 1200px;
+    }
+
 	.main-header {
 		flex-direction: row;
 		justify-content: space-between;

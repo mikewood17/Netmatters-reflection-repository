@@ -24,7 +24,7 @@ include("includes/db-connect.php");
             </ul>
         </div>
     </div>
-    <div class="section top">
+    <div class="section-top">
         <div class="container">
             <h1>Our Offices</h1>
         </div>
@@ -53,10 +53,11 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map" id="london-map">
+                    </div>    
+                    <div class="map" id="london-map">
 
-                        </div>
                     </div>
+                    
                 </div>
                 <div class="seperator">
                     <div class="address-item">
@@ -79,9 +80,9 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map" id="cambridge-map">
+                    </div>   
+                    <div class="map" id="cambridge-map">
 
-                        </div>
                     </div>
                 </div>
                 <div class="seperator">
@@ -105,10 +106,10 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map" id="wymondham-map">
+                    </div>    
+                    <div class="map" id="wymondham-map">
 
-                        </div>
-                    </div>
+                    </div>                   
                 </div>
                 <div class="seperator">
                     <div class="address-item">
@@ -131,142 +132,146 @@ include("includes/db-connect.php");
                             </div>
                             <a class="button" href="#">VIEW MORE</a>
                         </div>
-                        <div class="map" id="yarmouth-map">
+                    </div>
+                    <div class="map" id="yarmouth-map">
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="bottom-section container" id="enquiryForm">
-        <div class="contact-container">
-            <p>
-                <strong>
-                    Email us on:
-                </strong>
-                <br>
-            </p>
-            <p class="sales-email">
-                <a href="#">sales@netmatters.com</a>
-            </p>
-            <p>
-                <strong>
-                    Business hours:
-                </strong>
-            </p>
-            <p>
-                <strong>
-                    Monday - Friday 07:00 - 18:00
-                </strong>
-            </p>
-        </div>
-        <div class="ooh">
-                <a href="#">
-                    <p><strong>Out of Hours IT Support</strong></p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </a>
-        </div>
-        <div class="form-container">
-            <div class="alert-container">
-            <?php
-
-                if(!isset($_GET['signup'])){
-                    
-                } else {
-                    $signupCheck = $_GET['signup'];
-
-                    if($signupCheck == "empty") {
-                        echo 
-                        "<span class='alert error-alert'> Please fill in all required fields</span>
-                        <button type='button' class='close' data-dismiss='alert'>x</button>";
-                        
-                    }
-                    elseif($signupCheck == "char"){
-                        echo
-                         "<span class='alert error-alert'> Please enter a valid name</span>
-                         <button type='button' class='close' data-dismiss='alert'>x</button>";
-                        
-                    }
-                    elseif($signupCheck == "email"){
-                        echo
-                        "<span class='alert error-alert'> Please enter a valid email</span>
-                        <button type='button' class='close' data-dismiss='alert'>x</button>";
-                      
-                    }
-                    elseif($signupCheck == "telephone"){
-                        echo 
-                        "<span class='alert error-alert'> Please enter a valid telephone number</span>
-                        <button type='button' class='close' data-dismiss='alert'>x</button>";
-                        
-                    }
-                    elseif($signupCheck == "success"){
-                        echo
-                        "<span class='alert success-alert'>Your message has been sent!</span>
-                        <button type='button' class='close' data-dismiss='alert'>x</button>";
-                        
-                        
-                    
-                    }
-                };
-
-            ?>
+        <div class="bottom-spacer">
+            <div class="contact-container">
+                <p>
+                    <strong>
+                        Email us on:
+                    </strong>
+                    <br>
+                </p>
+                <p class="sales-email">
+                    <a href="#">sales@netmatters.com</a>
+                </p>
+                <p>
+                    <strong>
+                        Business hours:
+                    </strong>
+                </p>
+                <p>
+                    <strong>
+                        Monday - Friday 07:00 - 18:00
+                    </strong>
+                </p>
+                <div class="ooh">
+                        <a href="#">
+                            <p><strong>Out of Hours IT Support</strong></p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                </div>
             </div>
-            <form class="enquiry-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                <div class="form-input_wrapper">
-                    <div class="input input-md">
-                        <div class="form-group">
-                            <label for="name" class="required">Your Name</label>
-                            <input class="form-control" name="name" type="text" id="name">
-                        </div>
-                    </div>
-                    <div class="input input-md">
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input class="form-control" name="company" type="text" id="company">
-                        </div>
-                    </div>
-                    <div class="input input-md">
-                        <div class="form-group">
-                            <label for="email" class="required">Your Email</label>
-                            <input class="form-control" name="email" type="email" id="email">
-                        </div>
-                    </div>
-                    <div class="input input-md">
-                        <div class="form-group">
-                            <label for="telephone" class="required">Your Telephone Number</label>
-                            <input class="form-control" name="telephone" type="text" id="telephone" minlength="11">
-                        </div>
-                    </div>
-                    <div class="input input-lrg">
-                        <div class="form-group">
-                            <label for="subject" class="required">Subject</label>
-                            <input class="form-control" name="subject" type="text" id="subject">
-                        </div>
-                    </div>
-                    <div class="input input-lrg">
-                        <div class="form-group">
-                            <label for="message" class="required">Message</label>
-                            <textarea class="form-control" name="message" type="text" id="message" minlength="20"></textarea>
-                        </div>
-                    </div>
+        </div>
+        <div class="bottom-spacer">
+            <div class="form-container">
+                <div class="alert-container">
+                <?php
+
+                    if(!isset($_GET['signup'])){
+                        
+                    } else {
+                        $signupCheck = $_GET['signup'];
+                        
+
+                        if($signupCheck == "empty") {
+                            echo 
+                            "<span class='alert error-alert'> Please fill in all required fields</span>
+                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
+                        }
+                        elseif($signupCheck == "char"){
+                            echo
+                            "<span class='alert error-alert'> Please enter a valid name</span>
+                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
+                            
+                        }
+                        elseif($signupCheck == "email"){
+                            echo
+                            "<span class='alert error-alert'> Please enter a valid email</span>
+                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
+                        
+                        }
+                        elseif($signupCheck == "telephone"){
+                            echo 
+                            "<span class='alert error-alert'> Please enter a valid telephone number</span>
+                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
+                            
+                        }
+                        elseif($signupCheck == "success"){
+                            echo
+                            "<span class='alert success-alert'>Your message has been sent!</span>
+                            <button onclick='closeAlert()' type='button' class='close' data-dismiss='alert'>x</button>";
+                            
+                            
+                        
+                        }
+                    };
+
+                ?>
                 </div>
-                <div class="sign-up_info">
-                    <div class="checkbox-container">
-                        <span class="checkbox"></span>
-                        <input type="checkbox">
+                <form class="enquiry-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                    <div class="form-input_wrapper">
+                        <div class="input input-md">
+                            <div class="form-group">
+                                <label for="name" class="required">Your Name</label>
+                                <input class="form-control" name="name" type="text" id="name">
+                            </div>
+                        </div>
+                        <div class="input input-md">
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input class="form-control" name="company" type="text" id="company">
+                            </div>
+                        </div>
+                        <div class="input input-md">
+                            <div class="form-group">
+                                <label for="email" class="required">Your Email</label>
+                                <input class="form-control" name="email" type="email" id="email">
+                            </div>
+                        </div>
+                        <div class="input input-md">
+                            <div class="form-group">
+                                <label for="telephone" class="required">Your Telephone Number</label>
+                                <input class="form-control" name="telephone" type="text" id="telephone" minlength="11">
+                            </div>
+                        </div>
+                        <div class="input input-lrg">
+                            <div class="form-group">
+                                <label for="subject" class="required">Subject</label>
+                                <input class="form-control" name="subject" type="text" id="subject">
+                            </div>
+                        </div>
+                        <div class="input input-lrg">
+                            <div class="form-group">
+                                <label for="message" class="required">Message</label>
+                                <textarea class="form-control" name="message" type="text" id="message" minlength="20"></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="sign-up_body">
-                        <span class="privacy-policy">	Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</span>
+                    <div class="sign-up_info">
+                        <div class="checkbox-container">
+                            <span class="checkbox"></span>
+                            <input type="checkbox">
+                        </div>
+                        <div class="sign-up_body">
+                            <span class="privacy-policy">	Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</span>
+                        </div>
                     </div>
-                </div>
-                <div class="action-container">
-                    <button type="submit" value="Submit" name="submit" class="enquire-btn button">Send Enquiry</button>
-                    <small>
-                        <span class="error">*</span>Fields Required
-                    </small>
-                </div>
-            </form>
+                    <div class="action-container">
+                        <button type="submit" value="Submit" name="submit" class="enquire-btn button">Send Enquiry</button>
+                        <small>
+                            <span class="error">*</span>Fields Required
+                        </small>
+                    </div>
+                </form>
+            </div>
         </div>
         
 
@@ -287,5 +292,7 @@ include("includes/db-connect.php");
 <?php include("includes/cookie.php"); ?>
 
 <!--/Footer-->
+<script src="js/map.js"></script>
+<script src="js/alert.js"></script>
          
 <?php include("includes/footer.php");?>
