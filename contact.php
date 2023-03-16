@@ -181,8 +181,8 @@ include("includes/db-connect.php");
                                 <span class='error-alert'>$errors</span>
                                 <button  type='button' class='close' data-dismiss='alert'>x</button>
                             </div>";
-                        }
-                    } else {
+                        };
+                    } elseif(isset($_POST['submit'])) {
                         echo 
                         "<div class='alert alert-success'>
                             <span class='success-alert'>Your message has been sent!</span>

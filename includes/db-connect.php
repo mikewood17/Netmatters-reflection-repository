@@ -31,8 +31,7 @@ try {
 
 // Variables
 
-$error = null;
-$success = null;
+$success = false;
 
 // check if button pressed
 if(ISSET($_POST["submit"])) {
@@ -46,29 +45,36 @@ if(ISSET($_POST["submit"])) {
     $message = $_POST['message'];
 
     // error count
+    $errorCount = 0;
+
+    // alert array
     $alerts = [];
 
     // check if all inputs are empty
     if(empty(trim($name)) || empty(trim($email)) || empty(trim($telephone)) || empty(trim($subject)) ||empty(trim($message))){
         array_push($alerts, 'Please fill in all required fields');
+        $errorCount++;
     } 
 
     // check if input characters are valid
     if(!preg_match("/^[a-zA-Z- ]*$/", $name) || empty(trim($name))) {
         array_push($alerts, 'Please enter a valid name');
+        $errorCount++;
     }
 
     //check if email is valid
     if(!filter_var($email, FILTER_VALIDATE_EMAIL) || empty(trim($email))){
         array_push($alerts, 'Please enter a valid email');
+        $errorCount++;
     }
 
     //check if telephone is valid
     if(!preg_match("/^[0-9]*$/", $telephone) || empty(trim($telephone))){
         array_push($alerts, 'Please enter a valid telephone');
+        $errorCount++;
     }
 
-    if (empty($alerts)){
+    if ($errorCount === 0){
 
         try {
             $sql = "INSERT INTO `enquiry` (Name, Company_Name, Email, Telephone, Subject, Message) VALUES ('". $name ."', '". $companyName ."', '". $email ."', '". $telephone ."', '". $subject ."', '". $message ."')";
@@ -77,7 +83,8 @@ if(ISSET($_POST["submit"])) {
             echo $e->getMessage();
         }
         $conn = null;
-    }
+        $success = true;
+    } 
     
 }
 
