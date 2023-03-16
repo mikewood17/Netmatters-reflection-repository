@@ -48,6 +48,7 @@ if(ISSET($_POST["submit"])) {
     // check if inputs are empty
     if(empty(trim($name)) || empty(trim($email)) || empty(trim($telephone)) || empty(trim($subject)) ||empty(trim($message))){
         $error = "Please fill in all required fields";
+        header('location: contact.php?#enquiryForm');
      } // check if input characters are valid
     elseif(!preg_match("/^[a-zA-Z- ]*$/", $name)){
         $error = "Please enter a valid name";
