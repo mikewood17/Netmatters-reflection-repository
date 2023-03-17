@@ -315,6 +315,7 @@
 
     .review-btn-container{
         flex-direction: row;
+        flex-wrap: nowrap !important;
     }
 
 }

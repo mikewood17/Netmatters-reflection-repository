@@ -342,14 +342,33 @@
 
 .review-btn-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
-@media (min-width: 592px) and (max-width: 992px){
-    .review-btn-container{
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+@media (min-width: 992px){
+    .content{
         flex-direction: row;
+    }
+
+    .article-1,
+    .article-2 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1260px){
+    .review-btn-container{
+        flex-direction: column;
     }
 }
 
